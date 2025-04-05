@@ -1,0 +1,36 @@
+.bg-grid-small {
+  position: fixed;
+  inset: 0;
+  z-index: -999;
+  height: 100%;
+  width: 100%;
+  background-color: white !important;
+  background-image: 
+    linear-gradient(to right, rgba(128, 128, 128, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(128, 128, 128, 0.04) 1px, transparent 1px);
+  background-size: 14px 24px;
+
+  
+}
+
+
+
+.bg-grid-large {
+  position: absolute;
+  inset: 0;
+  z-index: -999;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  background-image: 
+    linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+    linear-gradient(to bottom, #f0f0f0 1px, transparent 1px);
+  background-size: 6rem 4rem;
+}
+
+
+.content {
+  position: relative;  /* Ensures content is above background */
+  z-index: 1;
+}
+

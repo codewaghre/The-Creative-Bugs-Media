@@ -1,0 +1,48 @@
+
+
+.call{
+    width: 100%;
+    
+}
+
+.call-heading{
+    padding-inline-start: 100px;
+    padding-block-end: 20px;
+}
+
+
+
+.calendly-container{
+    
+    overflow: hidden;
+}
+
+@media (min-width: 500px) and (max-width: 900px){
+    .call-heading{
+    padding-inline-start: 50px;
+    padding-block-end:30px;
+}
+.calendly-container{
+    
+    padding-inline: 50px;
+    padding-block-end: 80px;
+    overflow: hidden;
+}
+
+}
+
+
+@media (min-width: 300px) and (max-width: 500px){
+
+       .call-heading{
+    padding-inline-start: 30px;
+    padding-block-end:40px;
+}
+
+.calendly-container{
+    
+    padding-inline: 20px;
+    padding-block-end: 80px;
+    overflow: hidden;
+}
+}

@@ -1,0 +1,28 @@
+{
+    "headingOne" :"Workflow",
+    "headingTwo": "Management",
+
+    "card": [
+
+        {
+            "id" : 1,
+            "h1": "Strategic Content Planning",
+            "p": " We specialize in crafting effective content strategies that drive your brand forward. Our careful planning ensures your content resonates with your audience and achieves your goals. Let's take your content strategy to the next level.",
+            "icon" : "./icon/icon-six.svg"
+        },
+
+        {
+            "id" : 2,
+            "h1": "Strategic Content Planning",
+            "p": " We specialize in crafting effective content strategies that drive your brand forward. Our careful planning ensures your content resonates with your audience and achieves your goals. Let's take your content strategy to the next level.",
+            "icon" : "./icon/icon-five.png"
+        },
+
+        {
+            "id" : 3,
+            "h1": "Strategic Content Planning",
+            "p": " We specialize in crafting effective content strategies that drive your brand forward. Our careful planning ensures your content resonates with your audience and achieves your goals. Let's take your content strategy to the next level.",
+            "icon" : "./icon/icon-six.svg"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "headingOne": "Bringing Vision to life",
+    
+    "p1": "Transforming ideas into captivating realities, one project at a time",
+    "gallery": [
+        {
+            "id": 1,
+            "img": "./gallery/g1.jpg"
+        },
+        {
+            "id": 2,
+            "img": "./gallery/g1.jpg"
+        },
+        {
+            "id": 3,
+            "img": "./gallery/g4.jpg"
+        },
+        {
+            "id": 4,
+            "img": "./gallery/g1.jpg"
+        },
+        {
+            "id": 5,
+            "img": "./gallery/g1.jpg"
+        }
+    ],
+
+    "p2": " Experience the art of seamless storytelling through my edited reels. From dynamic transitions to cinematic effects, every frame is crafted to capture the essence of creativity. Whether it's high-energy edits, smooth cuts, or engaging visuals, my work showcases precision and style. Watch, explore, and get inspired!",
+
+    "p3": " Bring your vision to life with high-quality video and podcast shoots. Whether it's a professional interview, creative storytelling, or engaging discussions, I ensure top-tier production with crisp visuals and clear audio. From setup to final cut, every detail is crafted for maximum impact. Let’s create something remarkable together!",
+
+    "reel": [
+        {
+            "id": 1,
+            "reel": "./video/reel/reel-one.mp4"
+        },
+        {
+            "id": 2,
+            "reel": "./video/reel/reel-one.mp4"
+        },
+        {
+            "id": 3,
+            "reel": "./video/reel/reel-one.mp4"
+        },
+        {
+            "id": 4,
+            "reel": "./video/reel/reel-one.mp4"
+        }
+    ],
+    "video": [
+        {
+            "id": 1,
+            "video": "./video/gallery-video.mp4"
+        },
+
+        {
+            "id": 2,
+            "video": "./video/gallery-video.mp4"
+        }
+    ],
+
+    "videoLast": "./video/gallery-video.mp4"
+}

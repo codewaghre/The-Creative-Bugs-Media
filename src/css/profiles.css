@@ -1,0 +1,272 @@
+.profile {
+    width: 100%;
+    margin-top: 50px;
+
+}
+
+.profile-container {
+    display: flex;
+    width: 100%;
+
+}
+
+.left-profile {
+    width: 50%;
+
+}
+
+.right-profile {
+    width: 50%;
+    display: flex;
+    gap: 80px;
+    justify-content: start;
+    margin-top: 100px;
+}
+
+.profile-heading {
+    padding-inline-start: 100px;
+
+}
+
+.profile-img {
+
+    width: 80%;
+    height: 50%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+
+.profile-two {
+    margin-top: 80px;
+
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    border-radius: 24px;
+    margin-bottom: 30px;
+}
+
+.user-img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 24px;
+    transition: transform 1s ease-in-out;
+
+    img {
+        width: 100%;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.user-deatils {
+    padding-inline-start: 20px;
+    padding-block: 14px;
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+        color: var(--para-color);
+    }
+}
+
+
+@media (min-width: 1100px) and (max-width: 1300px) {
+    .profile-heading {
+        padding-inline-start: 50px;
+    }
+
+    .left-profile {
+        width: 44%;
+
+    }
+
+    .right-profile {
+        width: 50%;
+    }
+}
+
+
+@media (min-width: 900px) and (max-width: 1100px) {
+    .profile-heading {
+        padding-inline-start: 50px;
+    }
+
+    .left-profile {
+        width: 44%;
+
+    }
+
+    .right-profile {
+        width: 50%;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 900px) {
+    .profile-heading {
+        padding-inline-start: 50px;
+    }
+
+    .left-profile {
+        width: 44%;
+
+    }
+
+    .right-profile {
+        width: 50%;
+        padding-inline-start: 0px;
+        margin-top: 0px;
+        gap: 20px;
+    }
+
+
+    .profile-two {
+        margin-top: 40px;
+    }
+
+    .user-deatils {
+        padding-inline-start: 20px;
+        padding-block: 8px;
+
+        h3 {
+            font-size: 0.8rem;
+        }
+
+        p {
+            font-size: 0.5rem;
+            color: var(--para-color);
+        }
+    }
+
+
+}
+
+
+@media (min-width: 500px) and (max-width: 650px) {
+
+    .profile-heading {
+        padding-inline-start: 50px;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .left-profile {
+        width: 100%;
+    }
+
+    
+
+    .profile-img {
+
+        display: none;
+    }
+
+    .right-profile {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 40px;
+        padding-inline: 50px;
+    }
+
+    .profile-two {
+    margin-top: 40px;
+
+}
+
+.user-deatils {
+        padding-inline-start: 30px;
+        padding-block: 8px;
+
+        h3 {
+            font-size: 0.7rem;
+        }
+
+        p {
+            font-size: 0.5rem;
+            color: var(--para-color);
+        }
+    }
+
+
+}
+
+
+@media (min-width: 300px) and (max-width: 500px) {
+
+    .profile-heading {
+        padding-inline-start: 20px;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .left-profile {
+        width: 100%;
+    }
+
+    
+
+    .profile-img {
+
+        display: none;
+    }
+
+    .right-profile {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 40px;
+        padding-inline: 20px;
+    }
+
+    .profile-two {
+    margin-top: 20px;
+
+}
+
+.user-deatils {
+        padding-inline-start: 20px;
+        padding-block: 6px;
+
+        h3 {
+            font-size: 0.5rem;
+        }
+
+        p {
+            font-size: 0.5rem;
+            color: var(--para-color);
+        }
+    }
+
+    .profile {
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+
+
+}

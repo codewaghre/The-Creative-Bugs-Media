@@ -1,0 +1,58 @@
+
+{
+    "headingOne": "Meet the",
+    "headingTwo": "Members",
+
+    "image": "./camera/camera-five.png",
+
+    "profileCardOne": [
+
+        {
+            "id": 1,
+            "profileImage":"./user/user.png",
+            "name": " Abhishek Waghre",
+            "p": "Full Stack Developer"
+        },
+         {
+            "profileImage": "./user/user.png",
+            "name": " Abhishek Waghre",
+            "p": "Full Stack Developer"
+        },
+         {
+            "profileImage": "./user/user.png",
+            "name": " Abhishek Waghre",
+            "p": "Full Stack Developer"
+        },
+         {
+            "profileImage": "./user/user.png",
+            "name": " Abhishek Waghre",
+            "p": "Full Stack Developer"
+        }
+    ],
+
+    "profileCardTwo": [
+         {
+            "profileImage": "./user/user.png",
+            "name": " Abhishek Waghre",
+            "p": "Full Stack Developer"
+        },
+         {
+            "profileImage": "./user/user.png",
+            "name": " Abhishek Waghre",
+            "p": "Full Stack Developer"
+        },
+        {
+            "profileImage": "./user/user.png",
+            "name": " Abhishek Waghre",
+            "p": "Full Stack Developer"
+        },
+        {
+            "profileImage": "./user/user.png",
+            "name": " Abhishek Waghre",
+            "p": "Full Stack Developer"
+        }
+
+    ]
+
+
+}

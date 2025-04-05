@@ -1,0 +1,32 @@
+/* Glassmorphism Preloader */
+.glass-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  z-index: 1000;
+  transition: all 0.2s ease-in-out;
+  animation: blurReveal 0.2s ease-in-out forwards;
+}
+
+/* Smooth fade-up from top to bottom */
+@keyframes blurReveal {
+  0% {
+    backdrop-filter: blur(50px);
+    /* clip-path: inset(0% 0% 100% 0%); */
+    opacity: 1;
+  }
+  100% {
+    backdrop-filter: blur(50px);
+    /* clip-path: inset(0% 0% 0% 0%); */
+    opacity: 0.7;
+    pointer-events: none;
+  }
+}

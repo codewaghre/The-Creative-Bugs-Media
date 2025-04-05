@@ -1,0 +1,295 @@
+.partner {
+    width: 100%;
+    margin-top: 50px;
+    
+
+}
+
+.partner-container {
+    width: 100%;
+    display: flex;
+}
+
+
+
+.partner-right {
+
+    padding-block-start: 50px;
+    width: 36%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+
+}
+
+.partner-top-img {
+    overflow: hidden;
+}
+
+.partner-img {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        transition: transform 1s ease-in-out;
+    }
+
+    img:hover {
+        transform: scale(1.2);
+    }
+}
+
+
+.partner-left {
+    width: 64%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.partner-heading {
+    padding-inline-start: 100px;
+}
+
+.partner-card-container {
+
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow-x: hidden;
+}
+
+.partner-top-card {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    width: 100%;
+    padding-inline-start: 50px;
+}
+
+.card-container {
+    background-color: var(--bg-color);
+    width: 40%;
+    padding: 20px;
+    border-radius: 16px;
+
+    p {
+        color: var(--para-color);
+
+        &:hover {
+            color: var(--text-color);
+        }
+    }
+
+}
+
+.card-heading {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-block-end: 20px;
+
+    h2 {
+        color: var(--para-color);
+
+        &:hover {
+            color: var(--text-color);
+        }
+    }
+}
+
+.partner-bottom-card {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    width: 100%;
+    padding-inline-start: 50px;
+}
+
+.vector{
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    z-index: -999;
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+
+
+
+    .partner-container {
+        gap: 20px;
+    }
+
+    .partner-heading {
+        padding-inline-start: 50px;
+    }
+
+    .partner-top-card {
+        justify-content: start;
+        padding-inline-start: 50px;
+    }
+
+    .card-container {
+        width: 50%;
+    }
+
+    .partner-right {
+        width: 70%;
+    }
+
+    .partner-right {
+        width: 30%;
+        padding-inline: 20px;
+        gap: 80px;
+        padding-block-start: 100px;
+    }
+
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+    .partner-container {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .partner-heading {
+        padding-inline-start: 50px;
+    }
+
+    .partner-top-card {
+        justify-content: space-evenly;
+        gap: 0px;
+        flex-wrap: wrap;
+        padding-inline-start: 0px;
+    }
+
+    .card-container {
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
+
+    .card-heading {
+        h2 {
+            font-size: 0.9rem;
+        }
+    }
+
+
+    .partner-bottom-card {
+        justify-content: space-evenly;
+        gap: 0;
+        padding-inline-start: 0px;
+    }
+
+    .partner-left {
+        width: 100%;
+    }
+
+    .parnter-top-img {
+        display: none;
+    }
+
+
+    .partner-right {
+        width: 100%;
+        flex-direction: row;
+        padding-block: 10px;
+
+    }
+
+    .partner-bottom-img {
+        width: 100%;
+    }
+
+    .vector{
+    position: absolute;
+    top: 100px;
+    left: 150px;
+    
+    img{
+        width: 80%;
+    }
+}
+
+
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+    .partner-heading {
+        padding-inline-start: 20px;
+    }
+
+    .partner-container {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .partner-left {
+        width: 100%;
+        gap: 0px;
+    }
+
+    .partner-card-container {
+
+   
+    gap: 20px;
+}
+
+
+    .partner-top-card {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        padding-inline: 20px;
+    }
+
+    .card-container {
+        width: 100%;
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
+
+    .parnter-top-img {
+        display: none;
+    }
+
+
+    .partner-right {
+        width: 100%;
+        flex-direction: row;
+        padding-block: 10px;
+
+    }
+
+    .partner-bottom-img {
+        width: 100%;
+    }
+    .partner-bottom-card {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+        padding-inline: 20px;
+    }
+    .card-heading {
+        h2 {
+            font-size: 0.9rem;
+        }
+    }
+
+    
+    .vector{
+    display: none;
+}
+
+}

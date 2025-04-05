@@ -1,0 +1,34 @@
+{
+    "headingOne": "Get to",
+    "headingTwo": "know us",
+
+    "image": "./camera/camera-six.png",
+
+    "card": {
+
+        "p": "Founded in 2021 by Dishant and Rohit, CreativeBugs Media was created to help struggling brands and creators shine through top-notch content production. We’re dedicated to transforming your vision into captivating videos and podcasts, driving impressive growth and engagement. Let’s craft something extraordinary together!",
+
+        "h1": "Socials /..",
+
+        "links": [
+            {
+                "id": 1,
+                "name": "Instagram",
+                "link" : "https://www.creativebugsmedia.com/"
+            },
+
+             {
+                "id": 2,
+                "name": "LinkedIn",
+                "link" : "https://www.creativebugsmedia.com/"
+            },
+
+             {
+                "id": 3,
+                "name": "Tweeter",
+                "link" : "https://www.creativebugsmedia.com/"
+            }
+        ]
+    }
+
+}

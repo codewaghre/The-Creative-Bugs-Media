@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "headingOne": "Our Craft's",
+        "headingTwo": "& Expertise's",
+        "cameraImage": "./camera/camera-two.png",
+        "craftReel": [
+            {
+                "id": 1,
+                "reel":"./video/reel/reel-one.mp4"
+            },
+            {
+                "id": 2,
+                "reel":"./video/reel/reel-one.mp4"
+            },
+            {
+                "id": 3,
+                "reel":"./video/reel/reel-one.mp4"
+            }
+        ]
+    }
+]

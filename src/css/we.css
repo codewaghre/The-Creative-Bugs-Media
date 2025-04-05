@@ -1,0 +1,157 @@
+
+
+.we{
+    width: 100%;
+    margin-top: 80px;
+    position: relative;
+}
+
+.we-heading{
+    padding-inline-start: 100px;
+}
+
+.we-img-container{
+    text-align: end;
+    width: 30%;
+}
+
+.we-img{
+    width: 100%;
+    text-align: end;
+    background-color: black;
+    img{
+        width: 100%;
+    }
+}
+
+.about{
+    width: 70%;
+    display: flex;
+    flex-shrink: 0;
+    /* padding-block: 10px; */
+    justify-content: center;
+    padding-block-end: 200px;
+    padding-block-start: 50px;
+
+    
+}
+.we-container{
+    
+    flex-shrink: 0;
+    display: flex;
+    margin-top: 20px;
+}
+
+.about-us{
+    width: 70%;
+    padding-inline: 50px;
+    background-color: var(--bg-color);
+    padding-block-start: 80px;
+    border-radius: 24px;
+
+    p{
+        font-size: 1.1rem;
+        color: var(--para-color);
+
+        &:hover{
+            color: var(--text-color);
+        }
+    }
+
+    h1{
+        padding-top: 40px;
+        color: var(--para-color);
+        
+    }
+
+    .socials{
+        padding-top: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+        p{
+            padding-top: 0px;
+            
+            color: var(--para-color);
+
+            &:hover{
+                color: var(--link-color);
+            }
+        }
+    }
+
+}
+
+@media (min-width: 900px) and (max-width: 1100px){
+    .we-heading{
+    padding-inline-start: 50px;
+}
+    .we-container{
+        flex-direction: column;
+    }
+
+    .about{
+        width: 100%;
+        padding-block: 10px;
+        
+    }
+
+    .we-img-container{
+       display: none;
+        
+    }
+    .about-us{
+    width: 90%;
+    padding-block-end: 30px;
+    
+
+    p{
+        font-size: 1rem;
+        
+    } 
+
+}
+
+}
+
+@media (min-width: 300px) and (max-width: 900px){
+    .we-heading{
+    padding-inline-start: 30px;
+}
+    .we-container{
+        flex-direction: column;
+    }
+
+    .about{
+        width: 100%;
+        padding-block: 10px;
+    }
+
+    .we-img-container{
+       display: none;
+        
+    }
+    .about-us{
+    width: 90%;
+
+    padding-block: 20px;
+    padding-inline: 20px;
+    
+
+    p{
+        font-size: 0.8rem;
+        
+    } 
+
+}
+
+.we{
+    width: 100%;
+    margin-top: 40px;
+   
+    position: relative;
+}
+
+}

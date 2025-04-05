@@ -1,0 +1,40 @@
+
+
+{
+    "headingOne": "Perfect",
+    "headingTwo": "Partnership",
+
+    "topCards": [
+        {
+            "id": 1,
+            "svg": "./icon/icon-one.svg",
+            "h2": "Save Time",
+            "p": " We handle all aspects of video production, from scripting to editing, allowing you to focus on other important areas of your business."
+        },
+         {
+            "id": 2,
+            "svg": "./icon/icon-one.svg",
+            "h2": "Save Time",
+            "p": " We handle all aspects of video production, from scripting to editing, allowing you to focus on other important areas of your business."
+        }
+         
+    ],
+
+    "bottomCards":[
+        {
+            "id": 1,
+            "svg": "./icon/icon-one.svg",
+            "h2": "Save Time",
+            "p": " We handle all aspects of video production, from scripting to editing, allowing you to focus on other important areas of your business."
+        },
+         {
+            "id": 2,
+            "svg": "./icon/icon-one.svg",
+            "h2": "Save Time",
+            "p": " We handle all aspects of video production, from scripting to editing, allowing you to focus on other important areas of your business."
+        }  
+    ],
+
+    "imageOne" : "./camera/camera-three.png",
+    "imageTwo" : "./camera/camera-four.png"
+}
