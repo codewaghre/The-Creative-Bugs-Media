@@ -48,17 +48,13 @@ function App() {
             </GridLayout>
           } />
 
-
           <Route path="*" element={
             <GridLayout>
               <NotFound />
             </GridLayout>
           } />
 
-
-
         </Routes>
-
 
       </Router >
     </>
