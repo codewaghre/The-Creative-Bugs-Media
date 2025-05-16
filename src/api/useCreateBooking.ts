@@ -32,15 +32,14 @@ interface BookingResponse {
 }
 
 interface CreateBookingParams {
-  username: string;
-  eventId: string;
+  username?: string;
+  eventId?: string;
   bookingDetails: BookingDetails;
 }
 
 export const useCreateBooking = () => {
   return useMutation<BookingResponse, Error, CreateBookingParams>({
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    mutationFn: async ({ username, eventId, bookingDetails }) => {
+    mutationFn: async ({bookingDetails }) => {
       const { data } = await axios.post<BookingResponse>(
         `/api/createBooking`,
         bookingDetails

@@ -16,14 +16,9 @@ interface EventComponentProps {
     eventId: string;
 }
 
-
-
 const EventComponent = ({ username, eventId }: EventComponentProps) => {
-
-
     const { data: event, isLoading, error } = useGetEventDetails(username, eventId);
 
-    console.log(event);
 
     const { data: eventData, isLoading: eventLoading, error: eventError } = useGetEventAvailability(username, eventId);
 
