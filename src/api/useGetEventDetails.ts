@@ -23,7 +23,7 @@ export const useGetEventDetails = (username: string, eventId: string) => {
   return useQuery<EventDetails>({
     queryKey: ['eventDetails', username, eventId],
     queryFn: async () => {
-      const res = await axios.get<EventDetails>(`${crossOrigin}api/getEventDetails`, {
+      const res = await axios.get<EventDetails>(`${crossOrigin}/api/getEventDetails`, {
         params: { username, eventId },
       });
       
