@@ -1,10 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
+
 export interface EventAvailability {
   date: string;
   slots: string[];
 }
+
+const crossOrigin = import.meta.env.VITE_CROSS_ORIGIN
 
 export const useGetEventAvailability = (
   username: string,
@@ -14,11 +17,14 @@ export const useGetEventAvailability = (
     queryKey: ['eventAvailability', username, eventId],
     queryFn: async () => {
       const { data } = await axios.get<EventAvailability[]>(
-        '/api/getEventAvailability',
+        `${crossOrigin}/api/getEventAvailability`,
         {
           params: { username, eventId },
         }
       );
+
+      console.log(data);
+      
       return data;
     },
     enabled: !!username && !!eventId,

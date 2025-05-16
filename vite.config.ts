@@ -17,7 +17,8 @@ export default defineConfig({
       '/api': {
         target: "https://creative-bugs-media-admin.vercel.app",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '/api'),
+        secure: true,
+        // rewrite: (path) => path.replace(/^\/api/, '/api'),
       },
     },
   },

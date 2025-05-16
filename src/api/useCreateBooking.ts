@@ -37,11 +37,13 @@ interface CreateBookingParams {
   bookingDetails: BookingDetails;
 }
 
+const crossOrigin = import.meta.env.VITE_CROSS_ORIGIN
+
 export const useCreateBooking = () => {
   return useMutation<BookingResponse, Error, CreateBookingParams>({
     mutationFn: async ({bookingDetails }) => {
       const { data } = await axios.post<BookingResponse>(
-        `/api/createBooking`,
+        `${crossOrigin}/api/createBooking`,
         bookingDetails
           );
           return data;
