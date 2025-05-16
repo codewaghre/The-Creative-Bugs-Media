@@ -1,0 +1,53 @@
+
+
+[
+  {
+    "id": 1,
+    "brand": "/collab/c1.svg"
+  },
+  {
+    "id": 2,
+    "brand": "/collab/c2.png"
+  },
+  {
+    "id": 3,
+    "brand": "/collab/c3.svg"
+  },
+  {
+    "id": 4,
+    "brand": "/collab/c4.png"
+  },
+  {
+    "id": 5,
+    "brand": "/collab/c5.svg"
+  },
+  {
+    "id": 6,
+    "brand": "/collab/c6.png"
+  },
+
+  {
+    "id": 7,
+    "brand": "/collab/c1.svg"
+  },
+  {
+    "id": 8,
+    "brand": "/collab/c2.png"
+  },
+  {
+    "id": 9,
+    "brand": "/collab/c3.svg"
+  },
+  {
+    "id": 10,
+    "brand": "/collab/c4.png"
+  },
+  {
+    "id": 11,
+    "brand": "/collab/c5.svg"
+  },
+  {
+    "id": 12,
+    "brand": "/collab/c6.png"
+  }
+]

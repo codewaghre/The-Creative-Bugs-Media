@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "name": "Rakhi Sawant",
+    "role": "Animation Designer",
+    "image": "/team/p1.jpg",
+    "description": "A master motion maker, Krishna can turn your world around. He breathes life into art with his flawless sense of anatomy, perspective, volumes and motion."
+  },
+  {
+    "id": 2,
+    "name": "Krishna Mehta",
+    "role": "Storyboard Artist",
+    "image": "/team/p2.jpg",
+    "description": "Krishna sketches your dreams into frames. With years of experience in visual storytelling, he ensures every scene hits the mark emotionally and technically."
+  },
+  {
+    "id": 3,
+    "name": "Ayesha Khan",
+    "role": "3D Modeler",
+    "image": "/team/p3.jpg",
+    "description": "Ayesha sculpts digital masterpieces. Her command over form and texture helps bring our ideas to life"
+  },
+
+  {
+    "id": 4,
+    "name": "Ayesha Khan",
+    "role": "3D Modeler",
+    "image": "/team/p3.jpg",
+    "description": "Ayesha sculpts digital masterpieces. Her command over form and texture helps bring our ideas to life"
+  }
+    ]

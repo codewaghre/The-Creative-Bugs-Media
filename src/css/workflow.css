@@ -1,0 +1,224 @@
+/* workflow para css start */
+
+.workflow {
+    margin-block-end: 5rem;
+}
+
+.workflow-para {
+
+    text-align: start;
+    margin-inline: auto;
+    font-size: 1.2rem;
+    color: var(--para-color);
+    width: 72%;
+    text-align: center;
+
+    p {
+        margin-block: 1.5rem;
+    }
+}
+
+.bg-green {
+    color: var(--bg-green);
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+    .workflow-para {
+        font-size: 0.8rem;
+        width: 80%;
+
+        p {
+            margin-block: 1rem;
+        }
+    }
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+    .workflow-para {
+        font-size: 0.9rem;
+        width: 72%;
+
+        p {
+            margin-block: 1rem;
+        }
+    }
+}
+
+/* Workflow card  */
+.workflow-card {
+    width: 90%;
+    display: flex;
+    margin-inline: auto;
+    justify-content: center;
+    gap: 30px;
+    margin-block-start: 4rem;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+
+.tilt {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.workflow-card-one,
+.workflow-card-two,
+.workflow-card-three {
+    background-color: var(--craft-bg);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-block: 2rem;
+    /* overflow: hidden; */
+    box-shadow: 3px 0px 50px -6px var(--parnter-box-shadow);
+    -webkit-box-shadow: 3px 0px 50px -6px var(--parnter-box-shadow);
+    -moz-box-shadow: 3px 0px 50px -6px var(--parnter-box-shadow);
+}
+
+.workflow-card-one:hover,
+.workflow-card-two:hover,
+.workflow-card-three:hover {
+    border: 2px var(--dotted-border-color) dashed;
+    box-shadow: 3px 0px 50px -6px var(--parnter-box-shadow);
+    -webkit-box-shadow: 3px 0px 50px -6px var(--parnter-box-shadow);
+    -moz-box-shadow: 3px 0px 50px -6px var(--parnter-box-shadow);
+}
+
+.card-one-lottie {
+    padding-inline: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.workflow-lottie {
+    width: 45%;
+}
+
+.card-one-data {
+    padding-inline: 2rem;
+
+    h1 {
+        font-weight: 500;
+        padding-block-end: 1rem;
+    }
+}
+
+
+.card-one-data :nth-child(2) {
+    color: var(--para-color);
+    padding-block-end: 0.4rem;
+}
+
+
+.card-one-data p:nth-of-type(2) {
+    color: var(--second-para-color);
+    width: 100%;
+    display: block;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+}
+
+.workflow-card-one:hover p,
+.workflow-card-two:hover p,
+.workflow-card-three:hover p {
+    color: var(--para-color);
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+    .workflow-card {
+        width: 100%;
+        margin-inline: auto;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        margin-block-start: 3rem;
+        padding-block: 0.5rem;
+        padding-inline: 0.5rem;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .workflow-card-one {
+        width: 100%;
+    }
+
+    .workflow-card-two {
+        width: 100%;
+    }
+
+    .workflow-card-three {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 900px) and (max-width: 1200px) {
+    .workflow-card {
+        width: 100%;
+        /* flex-wrap: wrap; */
+        margin-inline: auto;
+        justify-content: center;
+        gap: 30px;
+        margin-block-start: 3rem;
+        padding-block: 0.5rem;
+        padding-inline: 0.5rem;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .workflow-card-one {
+        width: 100%;
+    }
+
+    .workflow-card-two {
+        width: 100%;
+    }
+
+    .workflow-card-three {
+        width: 100%;
+    }
+
+
+}
+
+/* Carousel behavior for medium screens */
+@media (max-width: 900px) and (min-width: 500px) {
+    .workflow-card {
+        overflow-x: auto !important;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 1rem;
+        gap: 1rem;
+        padding-inline: 1rem;
+        padding-bottom: 1rem;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+    }
+
+    .workflow-card>.tilt {
+        flex: 0 0 80%;
+        scroll-snap-align: center;
+        box-sizing: border-box;
+        margin-right: 1rem;
+    }
+
+    /* Add pseudo-element to create padding at the end */
+    .workflow-card::after {
+        content: '';
+        padding-inline: 1rem;
+    }
+
+    .card-one-data p:nth-of-type(2) {
+        color: var(--para-color);
+    }
+}

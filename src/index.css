@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Paytone+One&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--bg-color);
+  /* direction: rtl; */
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  max-width: 1600px;
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative;
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
+
+.font-paytone {
+  font-family: "Paytone One", sans-serif;
+}
+
+.font-outfit {
+  font-family: "Outfit", sans-serif;
+}
+
+:root {
+  --bg-yellow: #FCBA28;
+  --bg-red: #ED203D;
+  --bg-orange: #FC7428;
+  --bg-pink: #F38BA3;
+  --bg-green: #0BA95B;
+  --bg-blue: #0EA4D1;
+  --fontSize-h1: clamp(1.8rem, 2vw + 1rem, 3rem);
+}
+
+
+li,
+ul,
+button,
+a {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.bg-orange {
+  color: var(--bg-orange);
+}
+
+.bg-pink {
+  color: var(--bg-pink);
+}
+
+.bg-red {
+  color: var(--bg-red);
+}
+
+.bg-blue {
+  color: var(--bg-blue);
+}
+
+
+
+[data-theme="light"] {
+  --bg-color: #F7F7F7;
+
+  --nav-bg-color: #F7F7F7;
+  --nav-box-shadow: rgba(0, 0, 0, 0.06);
+
+  --text-color: #231f20;
+  --para-color: hsla(0, 0%, 6%, 0.875);
+  --second-para-color: hsla(0, 0%, 6%, 0.566);
+
+  --dotted-border-color: rgba(27, 26, 25, 0.403);
+
+  --logo-color-one: #231F20;
+  --logo-color-two: hsla(0, 0%, 6%, 0.566);
+
+  --craft-bg: #FFFFFF;
+  --opacity: 30%;
+
+  --glare-color-orange: #39210835;
+  --glare-color-pink: #30093036;
+  --glare-color-red: #33070745;
+
+  --glare-color-about: rgba(255, 255, 255, 0.341);
+  --hover-img-opacity: 100%;
+
+  --parnter-box-shadow: rgba(0, 0, 0, 0.414);
+
+  --footer-bg: #FFFFFF;
+
+
+}
+
+[data-theme="dark"] {
+
+  --bg-color: #0F0D0E;
+
+  --nav-bg-color: #231F20;
+  --nav-box-shadow: rgba(128, 127, 127, 0.064);
+
+  --text-color: #F9F4DA;
+  --para-color: hsla(50, 71%, 92%, 75%);
+  --second-para-color: hsla(50, 71%, 92%, 0.444);
+
+  --dotted-border-color: rgba(255, 228, 196, 0.23);
+
+  --logo-color-one: #F9F4DA;
+  --logo-color-two: hsla(50, 71%, 92%, 30%);
+
+  --craft-bg: #231f2085;
+  --opacity: 90%;
+
+  --glare-color-orange: #39210847;
+  --glare-color-pink: #30093057;
+  --glare-color-red: #3307076c;
+
+  --glare-color-about: rgba(236, 229, 220, 0.341);
+  --hover-img-opacity: 20%;
+
+  --footer-bg: #231f20bf;
+}

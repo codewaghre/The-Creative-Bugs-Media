@@ -1,0 +1,41 @@
+.dummy {
+
+    margin-inline: auto;
+    display: flex;
+}
+
+
+.dummy-one,
+.dummy-three {
+    width: 30%;
+    height: 40px;
+    border-inline: 2px var(--dotted-border-color) dashed;
+}
+
+.dummy-two {
+    width: 40%;
+    height: 40px;
+    background-color: transparent;
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+    .dummy {
+        width: 93%;
+        margin-inline: auto;
+        display: flex;
+        display: none;
+    }
+
+    .dummy-one {
+        width: 100%;
+
+    }
+
+    .dummy-two,
+    .dummy-three {
+        display: none;
+    }
+
+
+
+}

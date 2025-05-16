@@ -1,0 +1,347 @@
+.hero {
+    margin-block-start: 3.5rem;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(26, 1fr);
+    grid-template-rows: repeat(30, 20px);
+    z-index: 5;
+}
+
+.flex-center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* grid-area: row-start / column-start / row-end / column-end; */
+
+.hero-box-one {
+    grid-area: 1 / 1/ end/ 4;
+    position: relative;
+    z-index: 3;
+}
+
+.hero-box-two {
+    grid-area: 1 / 4/ end/ 10;
+    position: relative;
+}
+
+.hero-box-three {
+    grid-area: 1 / 10/ end/ 18;
+    position: relative;
+}
+
+.hero-box-four {
+    grid-area: 1 / 18/ end/ 24;
+    position: relative;
+    z-index: 3;
+}
+
+.hero-box-five {
+    grid-area: 1 / 24/ end/ 26;
+}
+
+.hero-box-six {
+    grid-area: 4 / 1/14/ end;
+    background-color: var(--bg-color);
+    position: relative;
+    z-index: 1;
+}
+
+.hero-box-seven {
+    grid-area: 4 / 4/ 14 / 24;
+    z-index: 2;
+}
+
+.hero-box-eight {
+    grid-area: 14 / 1/21/ end;
+    background-color: var(--bg-color);
+    z-index: 1;
+}
+
+.hero-box-nine {
+    grid-area: 14 / 4/21/ 24;
+    background-color: var(--bg-color);
+    z-index: 2;
+}
+
+.hero-box-ten {
+    grid-area: 21 / 1/27/ end;
+    position: relative;
+    gap: 20px;
+    z-index: 2;
+}
+
+.hero-heading {
+    /* font-size: clamp(1rem, 2vw + 1rem, 4rem); */
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+    padding-inline: 1.3rem;
+
+    h1 {
+        color: var(--text-color);
+    }
+}
+
+.hero-heading:hover {
+    background: var(--text-color);
+    background: radial-gradient(ellipse farthest-corner at center center, var(--text-color) 22%, var(--para-color) 56%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-para {
+    font-size: 1rem;
+    padding-inline: 8rem;
+    padding-block: 1.5rem;
+    text-align: center;
+}
+
+.hero-para :nth-child(1) {
+    color: var(--para-color);
+}
+
+.hero-para :nth-child(2) {
+    padding-block-start: 1rem;
+    color: var(--para-color);
+}
+
+.hero-para :nth-child(1):hover {
+    color: var(--text-color);
+}
+
+.hero-para :nth-child(2):hover {
+    color: var(--text-color);
+}
+
+.hero-button {
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.btn-one-work {
+    background-color: var(--bg-yellow);
+}
+
+.btn-two-connect {
+    background-color: var(--bg-red);
+}
+
+.btn-two-connect,
+.btn-one-work {
+    padding-inline: 20px;
+    padding-block: 6px;
+    border-radius: 8px;
+    /* TODO: Box Shadow */
+}
+
+.inline-gradient {
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0));
+}
+
+.block-gradient {
+    mask-image: linear-gradient(to top,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 1) 90%,
+            rgba(0, 0, 0, 0));
+}
+
+
+/* Make Mobile Resposive */
+@media (min-width: 320px) and (max-width: 500px) {
+
+    .hero {
+        margin-block-start: 1rem;
+    }
+
+    .hero-heading {
+        font-size: 1.5rem;
+    }
+
+    .hero-box-one {
+        grid-area: 1 / 1/ end/ 2;
+        z-index: 2;
+    }
+
+    .hero-box-two {
+        grid-area: 1 / 4/ end/ 10;
+        display: none;
+    }
+
+    .hero-box-three {
+        grid-area: 1 / 10/ end/ 18;
+        display: none;
+
+    }
+
+    .hero-box-four {
+        grid-area: 1 / 18/ end/ 26;
+        z-index: 3;
+    }
+
+
+
+    .hero-box-six {
+        grid-area: 4 / 1/14/ end;
+        background-color: var(--bg-color);
+        z-index: 1;
+    }
+
+    .hero-box-seven {
+        grid-area: 4 / 2/ 14 / 26;
+        z-index: 2;
+    }
+
+    .hero-box-eleven {
+        grid-area: 21 / 2/ 27/ 26;
+
+    }
+
+
+    .hero-para {
+        font-size: 0.7rem;
+        padding-inline: 0rem;
+        padding-block: 1.5rem;
+    }
+
+    .main-button {
+        font-size: 0.5rem;
+        font-weight: 500;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+}
+
+@media (min-width: 500px) and (max-width: 1000px) {
+    .hero-box-ten {
+        background-color: var(--bg-color);
+        z-index: 2;
+
+    }
+}
+
+/* below make heading responsve */
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .hero-heading {
+        font-size: 2.4rem;
+
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+    .hero-heading {
+        font-size: 2.2rem;
+
+    }
+
+    .hero-para {
+        font-size: 1rem;
+        padding-inline: 4rem;
+        padding-block: 1.5rem;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+    .hero-heading {
+        font-size: 2rem;
+
+    }
+
+    .hero-para {
+        font-size: 0.8rem;
+        padding-inline: 2rem;
+        padding-block: 1.5rem;
+    }
+}
+
+
+.hero-box-one::after,
+.hero-box-two::after,
+.hero-box-three::after,
+.hero-box-four::after {
+    content: '';
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-start: 0;
+    inline-size: 0;
+    block-size: 0;
+    border-inline-end: 2px dashed var(--dotted-border-color);
+    animation: drawDashedBorder 3.5s forwards;
+}
+
+/* Pseudo-element for animating top + bottom border */
+.hero-box-six::before,
+.hero-box-six::after,
+.hero-box-ten::before,
+.hero-box-ten::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    block-size: 100%;
+    animation: drawDottedLine 4s forwards;
+    z-index: 2;
+}
+
+.hero-box-six::after,
+.hero-box-ten::after {
+    inset-block-end: 0;
+    border-block-end: 2px var(--dotted-border-color) dashed;
+    inline-size: 0;
+}
+
+.hero-box-six::before,
+.hero-box-ten::after {
+    inset-block-start: 0;
+    border-block-start: 2px var(--dotted-border-color) dashed;
+    inline-size: 0;
+}
+
+
+/* Height Block sixe animation */
+@keyframes drawDashedBorder {
+    from {
+        block-size: 0;
+    }
+
+    to {
+        block-size: 100%;
+    }
+}
+
+/* width inline sixe animation */
+@keyframes drawDottedLine {
+    from {
+        inline-size: 0;
+    }
+
+    to {
+        inline-size: 100%;
+    }
+}

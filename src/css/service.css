@@ -1,0 +1,129 @@
+.service-para-container {
+    color: var(--para-color);
+    width: 72.50%;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.services-container {
+
+    width: 70%;
+    margin-inline: auto;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 10px;
+    margin-top: 2rem;
+
+}
+
+.services-container [class^="service-container"] {
+    h1 {
+        font-size: 2.5rem;
+        color: var(--text-color);
+        opacity: 20%;
+
+        &:hover {
+            opacity: 80%;
+        }
+    }
+
+    p {
+        color: var(--para-color);
+        opacity: 0;
+    }
+
+    &:hover {
+        p {
+            opacity: 100%;
+        }
+    }
+}
+
+.service-container-one:hover {
+    h1 {
+        color: var(--bg-red);
+        opacity: 100%;
+    }
+}
+
+.service-container-two:hover {
+    h1 {
+        color: var(--bg-pink);
+        opacity: 100%;
+    }
+}
+
+.service-container-three:hover {
+    h1 {
+        color: var(--bg-pink);
+        opacity: 100%;
+    }
+}
+
+.service-container-four:hover {
+    h1 {
+        color: var(--bg-green);
+        opacity: 100%;
+    }
+}
+
+.service-container-six:hover {
+    h1 {
+        color: var(--bg-blue);
+        opacity: 100%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+
+    .service-para-container {
+        color: var(--para-color);
+        font-size: 1rem;
+        text-align: start;
+    }
+
+    .services-container {
+        width: 80%;
+        margin-inline: auto;
+        padding-top: 2rem;
+    }
+
+    .services-container [class^="service-container"] {
+        h1 {
+            font-size: 1.5rem;
+            opacity: 20%;
+        }
+    }
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+    .services-container {
+        width: 80%;
+        margin-inline: auto;
+        padding-top: 2rem;
+    }
+
+    .services-container [class^="service-container"] {
+        h1 {
+            font-size: 1.5rem;
+            opacity: 20%;
+        }
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+    .services-container {
+        width: 80%;
+        margin-inline: auto;
+        padding-top: 2rem;
+    }
+
+    .services-container [class^="service-container"] {
+        h1 {
+            font-size: 1.8rem;
+            opacity: 20%;
+        }
+    }
+}

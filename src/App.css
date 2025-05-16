@@ -1,0 +1,24 @@
+.content-container {
+  width: 100%;
+  padding-inline: 5rem;
+}
+
+@media (min-width: 600px) and (max-width: 850px) {
+  .content-container {
+    padding-inline: 2rem;
+  }
+}
+
+
+@media (min-width: 850px) and (max-width: 1000px) {
+  .content-container {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+  .content-container {
+    padding-inline: 1.2rem;
+
+  }
+}

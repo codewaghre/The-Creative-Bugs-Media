@@ -1,0 +1,23 @@
+/* Logo Hover */
+
+/* Logo Hover */
+body.logo-hover-craft .logo-text-two {
+    color: var(--bg-pink);
+}
+
+body.logo-hover-connect-nav .logo-text-two {
+    color: var(--bg-green);
+}
+
+body.logo-hover-about .logo-text-two {
+    color: var(--bg-orange);
+}
+
+
+body.logo-hover-work .logo-text-two {
+    color: var(--bg-yellow);
+}
+
+body.logo-hover-connect .logo-text-two {
+    color: var(--bg-red);
+}

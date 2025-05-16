@@ -1,0 +1,312 @@
+.nav-about-grid {
+    display: grid;
+    grid-template-columns: repeat(26, 1fr);
+    grid-template-rows: repeat(26, 24px);
+    margin-block-end: 3rem;
+}
+
+.nav-about-box-one {
+    grid-area: 1 /1 / 10/ 27;
+    border-block: 2px var(--dotted-border-color) dashed;
+}
+
+.nav-about-box-two {
+    grid-area: 10 /1 / 17/ 27;
+    border-block-end: 2px var(--dotted-border-color) dashed;
+}
+
+.nav-about-box-three {
+    grid-area: 17 /1 / 23/ 27;
+    border-block-end: 2px var(--dotted-border-color) dashed;
+}
+
+.nav-about-box-four {
+    grid-area: 1 /4 / 10/ 14;
+    border-inline: 2px var(--dotted-border-color) dashed;
+}
+
+.nav-about-box-five {
+    grid-area: 1 /14 / 10/ 24;
+    border-inline-end: 2px var(--dotted-border-color) dashed;
+}
+
+.nav-about-box-six {
+    grid-area: 10 /4 / 17/ 24;
+    border-inline: 2px var(--dotted-border-color) dashed;
+}
+
+.nav-about-box-seven {
+    grid-area: 17 /4 / 23/ 24;
+    border-inline: 2px var(--dotted-border-color) dashed;
+}
+
+.nav-about-box-eight {
+    grid-area: 23 /4 / -1/ 10;
+    border-inline: 2px var(--dotted-border-color) dashed;
+}
+
+.nav-about-box-nine {
+    grid-area: 23 /10 / -1/ 16;
+    border-inline-end: 2px var(--dotted-border-color) dashed;
+}
+
+.nav-about-box-ten {
+    grid-area: 23 /16 / -1/ 24;
+    border-inline-end: 2px var(--dotted-border-color) dashed;
+}
+
+.nav-about-box-eleven {
+    grid-area: 23 /1 / -1/ 27;
+    border-block-end: 2px var(--dotted-border-color) dashed;
+}
+
+.nav-about-box-four,
+.nav-about-box-five,
+.nav-about-box-six {
+    align-content: center;
+    padding-inline: 2rem;
+    font-size: 1.2rem;
+    color: var(--text-color);
+
+}
+
+.nav-about-box-seven {
+    padding-inline: 1.5rem;
+    text-align: center;
+    align-content: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    position: relative;
+}
+
+
+.nav-about-box-eight,
+.nav-about-box-nine,
+.nav-about-box-ten {
+    text-align: center;
+    align-content: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    position: relative;
+}
+
+.team-img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 1;
+}
+
+img.fade-out {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.team-container {
+    margin-block-start: 8rem;
+    margin-block-end: 5rem;
+}
+
+
+@media (min-width: 900px) and (max-width: 1100px) {
+
+    .nav-about-box-four,
+    .nav-about-box-five,
+    .nav-about-box-six {
+        align-content: center;
+        font-size: 1rem;
+        color: var(--text-color);
+    }
+}
+
+
+
+
+@media (min-width: 650px) and (max-width: 900px) {
+
+    .nav-about-box-one {
+        grid-area: 1 /1 / 8/ 27;
+        border-block: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-two {
+        grid-area: 8 /1 / 17/ 27;
+        border-block-end: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-three {
+        grid-area: 17 /1 / 23/ 27;
+        border-block-end: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-four {
+        grid-area: 1 /4 / 8/ 24;
+        border-inline: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-five {
+        grid-area: 8 /4 / 15/ 24;
+        border-inline: 2px var(--dotted-border-color) dashed;
+        display: none;
+    }
+
+    .nav-about-box-six {
+        grid-area: 8 /4 / 17/ 24;
+        border-inline: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-seven {
+        grid-area: 17 /4 / 23/ 24;
+        border-inline: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-four,
+    .nav-about-box-five,
+    .nav-about-box-six {
+        font-size: 1rem;
+    }
+
+
+}
+
+@media (min-width: 500px) and (max-width: 650px) {
+
+    .nav-about-box-one {
+        grid-area: 1 /1 / 8/ 27;
+        border-block: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-two {
+        grid-area: 8 /1 / 17/ 27;
+        border-block-end: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-three {
+        grid-area: 17 /1 / 23/ 27;
+        border-block-end: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-four {
+        grid-area: 1 /4 / 8/ 24;
+        border-inline: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-five {
+        grid-area: 8 /4 / 15/ 24;
+        border-inline: 2px var(--dotted-border-color) dashed;
+        display: none;
+    }
+
+    .nav-about-box-six {
+        grid-area: 8 /4 / 17/ 24;
+        border-inline: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-seven {
+        grid-area: 17 /4 / 23/ 24;
+        border-inline: 2px var(--dotted-border-color) dashed;
+        padding-inline: 1rem;
+        text-align: center;
+        align-content: center;
+        font-size: 1rem;
+        font-weight: 500;
+
+    }
+
+
+    .nav-about-box-four,
+    .nav-about-box-five,
+    .nav-about-box-six {
+        font-size: 0.8rem;
+    }
+
+    .nav-about-box-eight,
+    .nav-about-box-nine,
+    .nav-about-box-ten {
+
+        font-size: 1rem;
+
+    }
+
+
+}
+
+
+@media (min-width: 320px) and (max-width: 500px) {
+
+    .nav-about-box-one {
+        grid-area: 1 /1 / 8/ 27;
+        border-block: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-two {
+        grid-area: 8 /1 / 17/ 27;
+        border-block-end: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-three {
+        grid-area: 17 /1 / 23/ 27;
+        border-block-end: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-four {
+        grid-area: 1 /2 / 8/ 26;
+        border-inline: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-five {
+        grid-area: 8 /2 / 15/ 26;
+        border-inline: 2px var(--dotted-border-color) dashed;
+        display: none;
+    }
+
+    .nav-about-box-six {
+        grid-area: 8 /2 / 17/ 26;
+        border-inline: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-seven {
+        grid-area: 17 /2 / 23/ 26;
+        border-inline: 2px var(--dotted-border-color) dashed;
+        padding-inline: 1rem;
+        text-align: center;
+        align-content: center;
+        font-size: 0.8rem;
+        font-weight: 500;
+
+    }
+
+
+    .nav-about-box-four,
+    .nav-about-box-five,
+    .nav-about-box-six {
+        font-size: 0.8rem;
+        padding-inline: 0.6rem;
+    }
+
+    .nav-about-box-eight,
+    .nav-about-box-nine,
+    .nav-about-box-ten {
+        font-size: 0.8rem;
+    }
+
+
+    .nav-about-box-eight {
+        grid-area: 23 /2 / -1/ 10;
+        border-inline: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-nine {
+        grid-area: 23 /10 / -1/ 17;
+        border-inline-end: 2px var(--dotted-border-color) dashed;
+    }
+
+    .nav-about-box-ten {
+        grid-area: 23 /17 / -1/ 26;
+        border-inline-end: 2px var(--dotted-border-color) dashed;
+    }
+
+
+}

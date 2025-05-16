@@ -1,0 +1,353 @@
+.partner-para {
+    color: var(--para-color);
+    width: 72%;
+    margin-inline: auto;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.partner-para :nth-child(1) {
+    padding-block-start: 2rem;
+}
+
+.partner-para :nth-child(2) {
+    padding-block-start: 1rem;
+    padding-block-end: 2rem;
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+    .partner-para :nth-child(1) {
+        padding-block-start: 1rem;
+    }
+
+    .partner-para {
+        font-size: 0.8rem;
+        width: 80%;
+
+        p {
+            margin-block: 1rem;
+        }
+    }
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+    .partner-para {
+        font-size: 0.9rem;
+        width: 72%;
+
+        p {
+            margin-block: 1rem;
+        }
+    }
+}
+
+
+/* Partner Card container start */
+
+.partner-card-container {
+    display: grid;
+    grid-template-columns: repeat(26, 1fr);
+    grid-template-rows: repeat(37, 20px);
+    /* background-color: rgba(240, 248, 255, 0.059); */
+}
+
+.circle-one {
+    border-radius: 50%;
+    border: 1px solid rgba(207, 50, 50, 0.167);
+    grid-area: 1 / 3 /-1 / 20;
+    z-index: 1;
+}
+
+.circle-two {
+    border-radius: 50%;
+    border: 1px solid rgba(18, 64, 129, 0.296);
+    grid-area: 1 / 5 /-1 / 22;
+    z-index: 1;
+}
+
+.circle-three {
+    border-radius: 50%;
+    border: 1px solid rgba(18, 108, 20, 0.303);
+    grid-area: 1 / 8 /-1 / 24;
+    z-index: 1;
+
+}
+
+.partner-card-one {
+    grid-area: 2 / 10 /15 / 18;
+
+}
+
+.partner-card-two {
+    grid-area: 11 /1 / 24/ 9;
+}
+
+.partner-card-three {
+    grid-area: 15 /19 / 28/ -1;
+}
+
+.partner-card-four {
+    grid-area: 25 / 9/ 37/ 18;
+}
+
+.drone {
+    grid-area: 12 / 9/ 26/ 19;
+}
+
+.drone-lottie-anime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.drone-lottie {
+    width: 60%;
+}
+
+
+.partner-card-one,
+.partner-card-two,
+.partner-card-three,
+.partner-card-four,
+.partner-card-five {
+
+    width: 100%;
+    height: 100%;
+    background-color: var(--craft-bg);
+    padding-block: 2rem;
+    padding-inline: 2rem;
+    border-radius: 12px;
+    color: var(--para-color);
+    z-index: 5;
+    box-shadow: 3px 0px 50px -6px var(--parnter-box-shadow);
+    -webkit-box-shadow: 3px 0px 50px -6px var(--parnter-box-shadow);
+    -moz-box-shadow: 3px 0px 50px -6px var(--parnter-box-shadow);
+
+
+
+
+
+    h1 {
+        font-size: 1.2rem;
+        padding-block-end: 0.7rem;
+    }
+
+    p {
+        font-size: 1rem;
+
+        font-size: camp(0.8rem, 0.8rem, 1rem);
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+
+    .partner-card-one,
+    .partner-card-two,
+    .partner-card-three,
+    .partner-card-four,
+    .partner-card-five {
+        h1 {
+            font-size: 1.2rem;
+            padding-block-end: 0.7rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+}
+
+@media (min-width: 950px) and (max-width: 1300px) {
+
+    .partner-card-one {
+        grid-area: 2 / 10 /15 / 18;
+    }
+
+    .partner-card-two {
+        grid-area: 11 /1 / 24/ 9;
+    }
+
+    .partner-card-three {
+        grid-area: 12 /19 / 25/ -1;
+    }
+
+    .partner-card-four {
+        grid-area: 26 / 9/ 38/ 18;
+    }
+
+
+    .drone {
+        grid-area: 14 / 10/ 28/ 18;
+    }
+
+    .partner-card-one,
+    .partner-card-two,
+    .partner-card-three,
+    .partner-card-four,
+    .partner-card-five {
+        padding-inline: 1.2rem;
+        padding-block: 1rem;
+
+        h1 {
+            font-size: 1.2rem;
+            padding-block-end: 0.7rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    .drone-lottie {
+        width: 80%;
+    }
+
+}
+
+@media (min-width: 800px) and (max-width: 950px) {
+    .partner-card-one {
+        grid-area: 2 / 2 /12 / 13;
+    }
+
+    .partner-card-two {
+        grid-area: 2 /15 / 12/ 25;
+    }
+
+    .partner-card-three {
+        grid-area: 22 /2 / 32/ 13;
+    }
+
+    .partner-card-four {
+        grid-area: 22 / 15/ 32/ 25;
+    }
+
+    .drone {
+        grid-area: 13 / 2/ 20/ 25;
+    }
+
+    .partner-card-one,
+    .partner-card-two,
+    .partner-card-three,
+    .partner-card-four,
+    .partner-card-five {
+        padding-inline: 1rem;
+        padding-block: 1rem;
+
+        h1 {
+            font-size: 1.2rem;
+            padding-block-end: 0.7rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
+
+    .drone-lottie {
+        width: 60%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+    .partner-card-container {
+
+        grid-template-columns: repeat(26, 1fr);
+        grid-template-rows: repeat(45, 20px);
+
+    }
+
+    .partner-card-one {
+        grid-area: 2 / 2 /12 / 26;
+    }
+
+    .partner-card-two {
+        grid-area: 13 /2 / 23/ 26;
+    }
+
+    .partner-card-three {
+        grid-area: 24 /2 / 34/ 26;
+        /* display: none; */
+    }
+
+    .partner-card-four {
+        grid-area: 35 /2 / 45/ 26;
+        /* display: none; */
+    }
+
+    .drone {
+        display: none;
+    }
+
+    .partner-card-one,
+    .partner-card-two,
+    .partner-card-three,
+    .partner-card-four,
+    .partner-card-five {
+        padding-inline: 1rem;
+        padding-block: 1rem;
+
+        h1 {
+            font-size: 1.2rem;
+            padding-block-end: 0.7rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
+
+
+}
+
+@media (min-width: 500px) and (max-width: 800px) {
+    .partner-card-container {
+
+        grid-template-columns: repeat(26, 1fr);
+        grid-template-rows: repeat(45, 20px);
+
+    }
+
+    .partner-card-one {
+        grid-area: 2 / 2 /12 / 26;
+    }
+
+    .partner-card-two {
+        grid-area: 13 /2 / 23/ 26;
+    }
+
+    .partner-card-three {
+        grid-area: 24 /2 / 34/ 26;
+        /* display: none; */
+    }
+
+    .partner-card-four {
+        grid-area: 35 /2 / 45/ 26;
+        /* display: none; */
+    }
+
+    .drone {
+        display: none;
+    }
+
+    .partner-card-one,
+    .partner-card-two,
+    .partner-card-three,
+    .partner-card-four,
+    .partner-card-five {
+        padding-inline: 1rem;
+        padding-block: 1rem;
+
+        h1 {
+            font-size: 1.2rem;
+            padding-block-end: 0.7rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+
+}
