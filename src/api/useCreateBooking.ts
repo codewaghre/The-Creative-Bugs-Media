@@ -45,7 +45,6 @@ export const useCreateBooking = () => {
         bookingDetails
           );
           return data;
-
     },
   });
 };

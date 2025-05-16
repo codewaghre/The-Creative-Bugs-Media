@@ -24,9 +24,7 @@ export const useGetEventDetails = (username: string, eventId: string) => {
       const res = await axios.get<EventDetails>('api/getEventDetails', {
         params: { username, eventId },
       });
-
-      console.log( "event details", res.data); 
-
+      
       return res.data;
     },
     enabled: !!username && !!eventId,
