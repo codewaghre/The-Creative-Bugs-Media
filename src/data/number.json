@@ -1,0 +1,43 @@
+
+[
+    {
+        "id" : "1",
+        "statsClassName": "stats-data-one",
+        "lottieFile": "/lottie/client.json",
+        "playerClassName": "lottie-anime-one",
+        "statsDataClassName" :"stats-one-data",
+        "bgImg" : "/bg.png",
+        "number": "35+",
+        "name": "Brands",
+        "slogan": "Real numbers"
+
+    },
+
+
+    {
+        "id": "2",
+        "statsClassName":"stats-data-two",
+        "lottieFile": "/lottie/target.json",
+        "playerClassName": "lottie-anime-two",
+
+        "statsDataClassName" :"stats-two-data",
+        "bgImg" : "/bg.png",
+        "number": "4000+",
+        "name": "Videos",
+        "slogan": "Real results"
+    }, 
+
+    {
+        "id": "3",
+        "statsClassName":"stats-data-three",
+        "lottieFile": "/lottie/thinking.json",
+        "playerClassName": "lottie-anime-three",
+
+        "statsDataClassName" :"stats-three-data",
+        "bgImg" : "/bg.png",
+        "number": "12M",
+        "name": "Views",
+        "slogan": "No fluff"
+    }
+]
+

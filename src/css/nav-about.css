@@ -63,9 +63,10 @@
 .nav-about-box-four,
 .nav-about-box-five,
 .nav-about-box-six {
+    text-align: center;
     align-content: center;
     padding-inline: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--text-color);
 
 }
@@ -74,10 +75,11 @@
     padding-inline: 1.5rem;
     text-align: center;
     align-content: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: var(--text-color);
     position: relative;
+
 }
 
 
@@ -225,9 +227,7 @@ img.fade-out {
     .nav-about-box-eight,
     .nav-about-box-nine,
     .nav-about-box-ten {
-
         font-size: 1rem;
-
     }
 
 

@@ -2,14 +2,24 @@ import Heading from '@/components/Heading'
 import Service from '@/components/Service'
 import Team from '@/components/Team'
 
+import about from '../data/about.json'
+import aboutHeading from '../data/heading.json'
+
+
+
 const About = () => {
+
+    const { p1, p2, p3, p4 } = about.content
+    const { one, oneColor, two, twoColor } = aboutHeading.aboutus
     return (
         <main className='nav-about content-container'>
 
             <div>
                 <Heading
-                    one={"Who We Are Is What We Create"}
-                    oneColor={"var(--bg-orange)"}
+                    one={one}
+                    oneColor={oneColor}
+                    two={two}
+                    twoColor={twoColor}
                 />
             </div>
 
@@ -19,38 +29,39 @@ const About = () => {
                 <div className='nav-about-box-two'></div>
                 <div className='nav-about-box-three'></div>
                 <div className='nav-about-box-four'>
-                    <p>At The Creative Bugs Media, we believe creativity is in the details — and like the tiniest bugs in the digital world, we’re always crawling through pixels, frames, and soundwaves to find what truly makes a story stick.</p>
+                    <p>{p1}</p>
                 </div>
                 <div className='nav-about-box-five'>
-                    <p>At The Creative Bugs Media, we believe creativity is in the details — and like the tiniest bugs in the digital world, we’re always crawling through pixels, frames, and soundwaves to find what truly makes a story stick.</p>
+                    <p>{p4}</p>
                 </div>
                 <div className='nav-about-box-six'>
-                    <p>In just over 3 years, we’ve grown from a small collective of creators into a multidisciplinary powerhouse — covering everything from video production, editing, and animation to reels, podcasts, and full-scale storytelling. We've partnered with startups, creators, and visionary brands, always driven by one goal: to make content that moves people — visually, emotionally, and memorably.</p>
+                    <p>{p2}</p>
                 </div>
                 <div className='nav-about-box-seven'>
                     <p>
-                        At The Creative Bugs, we don’t just produce. We collaborate. adapt. craft.
-
+                        {p3.map((part, i) =>
+                            typeof part === 'string' ? (
+                                part
+                            ) : (
+                                <span key={i} className={part.className}>
+                                    {part.text}
+                                </span>
+                            )
+                        )}
                     </p>
-                    <p>And above all — we create <span className='bg-green'>content that bites.</span></p>
+                </div>
+                {
+                    about.socialsLinks.map((data) => (
+                        <a href={data.link} target='blank' className={data.className}>
+                            <div key={data.id}>
+                                <img className="about-box-img" src={data.img} alt="Background" />
+                                <a target='blank' href={data.link}>{data.linkName}</a>
 
-                    <img className="about-box-img" src="/bg.png" alt="Background" />
-                </div>
-                <div className='nav-about-box-eight'>
-                    <a href="">Instagram</a>
-                    <img className="about-box-img" src="/bg.png" alt="Background" />
-                </div>
-                <div className='nav-about-box-nine'>
-                    <a href="">Instagram</a>
-                    <img className="about-box-img" src="/bg.png" alt="Background" />
-                </div>
-                <div className='nav-about-box-ten'>
-                    <a href="">Instagram</a>
-                    <img className="about-box-img" src="/bg.png" alt="Background" />
-                </div>
+                            </div>
+                        </a>
+                    ))
+                }
                 <div className='nav-about-box-eleven'></div>
-
-
             </div>
 
             <div className='team-container'>

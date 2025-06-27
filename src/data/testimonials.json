@@ -1,0 +1,36 @@
+[
+    {
+      "id": 1,
+      "testimonial": "Working with Max was a game-changer. His attention to detail and creative vision brought our project to life beyond expectations.",
+      "user_img": "https://randomuser.me/api/portraits/men/32.jpg",
+      "name": "John Carter",
+      "work": "Creative Director at Visionary Studios"
+    },
+    {
+      "id": 2,
+      "testimonial": "The team delivered exactly what we needed. Fast, responsive, and highly skilled — would definitely recommend.",
+      "user_img": "https://randomuser.me/api/portraits/women/77.jpg",
+      "name": "Emily Watson",
+      "work": "Marketing Manager at BrightSpark"
+    },
+    {
+      "id": 3,
+      "testimonial": "Their professionalism and ability to adapt to last-minute changes were outstanding. A truly seamless experience. Their professionalism and ability to adapt to ",
+      "user_img": "https://randomuser.me/api/portraits/men/76.jpg",
+      "name": "Amit Khanna",
+      "work": "Founder & CEO at DevNest"
+    },
+
+    {
+        "id": 4,
+        "testimonial": "Their professionalism and ability to adapt to last-minute changes were outstanding. A truly seamless experience.",
+        "user_img": "https://randomuser.me/api/portraits/women/77.jpg",
+        "name": "Amit Khanna",
+        "work": "Founder & CEO at DevNest"
+      }
+
+    
+  ]
+
+    
+  

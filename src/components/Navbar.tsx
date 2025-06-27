@@ -102,7 +102,7 @@ const Navbar = () => {
                             aria-label="About Us"
                         >
                             About Us.
-                            {location.pathname === "/about" && <span className="sr-only"> (current page)</span>}
+                            {location.pathname === "/about" && <span className="sr-only">(current page)</span>}
                         </Link>
                     </li>
 
@@ -119,7 +119,7 @@ const Navbar = () => {
                             aria-label="Creaft and Expertises"
                         >
                             Craft and Expertises.
-                            {location.pathname === "/work" && <span className="sr-only"> (current page)</span>}
+                            {location.pathname === "/work" && <span className="sr-only">(current page)</span>}
                         </Link>
                     </li>
 
@@ -136,7 +136,7 @@ const Navbar = () => {
                             aria-label="Connect with Us"
                         >
                             Connect with Us.
-                            {location.pathname === "/connect" && <span className="sr-only"> (current page)</span>}
+                            {location.pathname === "/connect" && <span className="sr-only">(current page)</span>}
                         </Link>
                     </li>
 
@@ -235,9 +235,6 @@ const Navbar = () => {
                                     Craft and Expertises
                                 </Link>
                             </div>
-
-
-
 
                         </div>
                     </div>)}

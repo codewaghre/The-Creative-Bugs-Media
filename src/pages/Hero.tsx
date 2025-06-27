@@ -1,11 +1,15 @@
 
+import { Link } from "react-router-dom";
+import homeData from '../data/home.json'
 
 const Hero = () => {
+
+  const { h1, p1, p2, p1_bold, b1, b2 } = homeData
 
   const handleWorkEnter = () => {
     document.body.classList.add('logo-hover-work');
   };
-  
+
   const handleWorkLeave = () => {
     document.body.classList.remove('logo-hover-work');
   };
@@ -37,8 +41,7 @@ const Hero = () => {
         >
           <div className="hero-heading font-paytone">
             <h1 id="hero-heading">
-              Crafting Stories & Building Brands<br />
-              for the Future
+              {h1}
             </h1>
           </div>
         </section>
@@ -49,9 +52,8 @@ const Hero = () => {
         >
           <div className="hero-para">
             <p id="hero-stats">
-              <strong>87% of marketers</strong> say video boosts lead generation.<br />
-              This isn’t just a passing trend—it’s a powerful shift that’s transforming engagement,
-              boosting conversions, and shaping the future of marketing.
+              <strong>{p1_bold}</strong>{p1}<br />
+              {p2}
             </p>
           </div>
         </section>
@@ -61,29 +63,35 @@ const Hero = () => {
           aria-label="Call to Action"
         >
           <div className="hero-button">
-            <button
-              onMouseEnter={handleWorkEnter}
-              onMouseLeave={handleWorkLeave}
-              onFocus={handleWorkEnter}
-              onBlur={handleWorkLeave}
-              className="btn-one-work"
-              aria-label="View our portfolio work"
-            >
-              Our Work
-              <span className="sr-only"> - View our portfolio</span>
-            </button>
 
-            <button
-              className="btn-two-connect"
-              onMouseEnter={handleConnectEnter}
-              onMouseLeave={handleConnectLeave}
-              onFocus={handleConnectEnter}
-              onBlur={handleConnectLeave}
-              aria-label="Contact us"
-            >
-              Connect
-              <span className="sr-only"> - Get in touch with our team</span>
-            </button>
+            <Link to={"/work"}>
+              <button
+                onMouseEnter={handleWorkEnter}
+                onMouseLeave={handleWorkLeave}
+                onFocus={handleWorkEnter}
+                onBlur={handleWorkLeave}
+                className="btn-one-work"
+                aria-label="View our portfolio work"
+              >
+                {b1}
+                <span className="sr-only"> - View our portfolio</span>
+              </button>
+            </Link>
+
+            <Link to={"/connect"}>
+              <button
+                className="btn-two-connect"
+                onMouseEnter={handleConnectEnter}
+                onMouseLeave={handleConnectLeave}
+                onFocus={handleConnectEnter}
+                onBlur={handleConnectLeave}
+                aria-label="Contact us"
+              >
+                {b2}
+                <span className="sr-only"> - Get in touch with our team</span>
+              </button>
+            </Link>
+
           </div>
         </section>
       </div>

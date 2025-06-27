@@ -1,0 +1,58 @@
+{
+    "numberPage": {
+        "one": "We Plan. ",
+        "two": "We Create.  ",
+        "three": "You Grow .",
+        "oneColor": "var(--bg-orange)",
+        "twoColor": "var(--bg-green)",
+        "threeColor": "var(--bg-pink)"
+    },
+    "workflow": {
+        "one": "Built to Execute.",
+        "two": " Structured to Scale. ",
+        "oneColor": "var(--bg-orange)",
+        "twoColor": "var(--bg-green)"
+    },
+    "aboutus": {
+        "one": "Built by Creators. ",
+        "two": "Backed by Strategy.",
+        "oneColor": "var(--bg-orange)",
+        "twoColor": "var(--bg-green)"
+    },
+
+    "craft": {
+        "one": "Our Imapact.  ",
+        "two": "and Expertise. ",
+        "oneColor": "bg-orange",
+        "twoColor": "bg-green"
+    },
+
+    "work": {
+        "one": "Our Imapact.  ",
+        "two": "and Expertise. ",
+         "oneColor": "var(--bg-orange)",
+        "twoColor": "var(--bg-green)"
+    },
+
+    "connect" : {
+        "one": "Get in Touch ",
+        "two": "with Us",
+        "oneColor": "var(--bg-orange)",
+         "twoColor": "var(--bg-green)"
+    },
+
+    "team" : {
+        "one": "Meet the ",
+        "two": "Bugs Team",
+        "oneColor": "var(--bg-orange)",
+        "twoColor": "var(--bg-green)"
+    },
+
+    "services" : {
+        "one": "You dream it.",
+        "two": "We Frame it.",
+        "oneColor": "var(--bg-orange)",
+        "twoColor": "var(--bg-green)"
+    }
+
+}

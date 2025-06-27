@@ -1,7 +1,15 @@
 import { useRef } from 'react';
 import Video from '@/components/Video';
 
-const CraftVideoTwo = () => {
+interface Props {
+    video: string
+    reelTwo: string
+    reelOne: string
+    hashImg: string
+    filter?: string
+}
+
+const CraftVideoTwo = ({ filter, reelOne, reelTwo, hashImg, video }: Props) => {
     const podcastRef = useRef<HTMLVideoElement | null>(null);
     const reelOneRef = useRef<HTMLVideoElement | null>(null);
     const reelTwoRef = useRef<HTMLVideoElement | null>(null);
@@ -27,28 +35,28 @@ const CraftVideoTwo = () => {
 
                 <div className="work-video-one">
                     <div
-                        className="video-container"
+                        className={`video-container ${filter || ''}`}
                         onMouseEnter={() => handleMouseEnter(podcastRef.current)}
                         onMouseLeave={() => handleMouseLeave(podcastRef.current)}
                     >
                         <Video
                             ref={podcastRef}
-                            src="/videos/podcast/p1.mp4"
-                            hashImg="L29tJvt700t7IUIU~q-;00_3%MIU"
+                            src={video}
+                            hashImg={hashImg}
                         />
                     </div>
                 </div>
 
                 <div className="work-reel-one">
                     <div
-                        className="reel-container"
+                        className={`reel-container ${filter || ''}`}
                         onMouseEnter={() => handleMouseEnter(reelOneRef.current)}
                         onMouseLeave={() => handleMouseLeave(reelOneRef.current)}
                     >
                         <Video
                             ref={reelOneRef}
-                            src="/videos/reel/r1.mp4"
-                            hashImg="L29tJvt700t7IUIU~q-;00_3%MIU"
+                            src={reelOne}
+                            hashImg={hashImg}
                         />
 
                     </div>
@@ -56,14 +64,14 @@ const CraftVideoTwo = () => {
 
                 <div className="work-reel-two">
                     <div
-                        className="reel-container"
+                        className={`reel-container ${filter || ''}`}
                         onMouseEnter={() => handleMouseEnter(reelTwoRef.current)}
                         onMouseLeave={() => handleMouseLeave(reelTwoRef.current)}
                     >
                         <Video
                             ref={reelTwoRef}
-                            src="/videos/reel/r1.mp4"
-                            hashImg="L29tJvt700t7IUIU~q-;00_3%MIU"
+                            src={reelTwo}
+                            hashImg={hashImg}
                         />
                     </div>
                 </div>

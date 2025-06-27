@@ -22,9 +22,7 @@ export const useGetEventAvailability = (
           params: { username, eventId },
         }
       );
-
-      console.log(data);
-      
+    
       return data;
     },
     enabled: !!username && !!eventId,

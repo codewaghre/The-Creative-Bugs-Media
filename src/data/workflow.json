@@ -1,0 +1,71 @@
+{
+    "paragraphs": [
+        {
+            "textParts": [
+              "Our process runs on ",
+              { "text": "SOPs", "className": "bg-green" },
+              ", ",
+              { "text": "timelines", "className": "bg-green" },
+              ", and ",
+              { "text": "trust ", "className": "bg-green" },
+              "— so your content doesn’t wait, and your brand never feels off-track.",
+              "It’s a creative flow where ideas become scripts, shoots, and stunning edits — ",
+              { "text": "all with passion and precision.", "className": "bg-green" }
+    
+            ]
+          },
+
+        {
+            "textParts": [
+                "A clear, repeatable system that turns ideas into high-performing content — ",
+                { "text": "consistently, across formats", "className": "bg-green" },
+                " and ",
+                { "text": "platforms.", "className": "bg-green" }
+            ]
+        },
+
+      
+      {
+        "textParts": [
+          "Our process isn’t just smooth — ",
+          { "text": "it’s cinematic.", "className": "bg-green" }
+        ]
+      }
+    ],
+    "cards": [
+      {
+        "title": "Strategy & Planning",
+        "h1_className" : "bg-orange",
+        "className": "workflow-card-one",
+        "lottieSrc": "/lottie/thinking.json",
+        "paragraphs": [
+          "We define what to say, who it’s for, and how it drives your goals.",
+          "We specialize in crafting effective content strategies that drive your brand forward. Our careful planning ensures your content resonates with your audience and achieves your goals. Let's take your content strategy to the next level."
+        ],
+        "glareColor": "var(--glare-color-orange)"
+      },
+      {
+        "title": "Production & Execution",
+        "h1_className" : "bg-green",
+        "className": "workflow-card-two",
+        "lottieSrc": "/lottie/studio.json",
+        "paragraphs": [
+          "We handle the scripting, shoots, logistics, all on autopilot, with timely approvals.",
+          "At CreativeBugs Media, we specialize in video production, turning your ideas into visually stunning stories. Our experienced team excels in every aspect of video production, from pre-production planning to shooting on location or in the studio."
+        ],
+        "glareColor": "var(--glare-color-pink)"
+      },
+      {
+        "title": "Post-Production & Delivery",
+        "h1_className" : "bg-pink",
+        "className": "workflow-card-three",
+        "lottieSrc": "/lottie/editing.json",
+        "paragraphs": [
+          "Editing, polishing, and packaging content that’s on-brand, on-message, and on time.",
+          "We transform raw footage into captivating videos that elevate your brand. Our skilled editors enhance visuals, perfect sound quality, and add dynamic effects to ensure every frame aligns with your vision. Whether it's a promotional video or a social media clip."
+        ],
+        "glareColor": "var(--glare-color-red)"
+      }
+    ]
+  }
+  

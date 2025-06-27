@@ -14,10 +14,12 @@
 
 .work-reel-one {
     grid-area: 1 / 1 /end/ 6;
+    border-inline-end: 2px var(--dotted-border-color) dashed;
 }
 
 .work-reel-two {
     grid-area: 1 / 6 /end/ 11;
+    border-inline-end: 2px var(--dotted-border-color) dashed;
 }
 
 .work-reel-two,
@@ -67,9 +69,6 @@
 }
 
 @media (min-width: 700px) and (max-width: 1000px) {
-
-
-
     .work-video-one {
 
         .video-container {
@@ -77,6 +76,8 @@
             padding-block: 10px;
         }
     }
+
+
 
     .work-reel-two,
     .work-reel-one {
@@ -111,10 +112,12 @@
     }
 
     .work-reel-one {
-        grid-area: 1 / 16 /end/ end;
+        display: none;
     }
 
     .work-reel-two {
-        display: none;
+        grid-area: 1 / 16 /end/ end;
+        border-inline-start: 2px var(--dotted-border-color) dashed;
+        border-inline-end: none;
     }
 }

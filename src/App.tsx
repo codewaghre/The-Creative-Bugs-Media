@@ -9,6 +9,7 @@ import Work from './nav-pages/Work';
 import Connect from './nav-pages/Connect'
 import PreLoader from './pages/PreLoader';
 import { useState } from 'react';
+import NotFound from './pages/NotFound';
 
 
 const username = import.meta.env.VITE_USERNAME;
@@ -31,6 +32,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/work" element={<Work />} />
               <Route path="/connect" element={<Connect username={username} eventId={eventId} />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
           </>

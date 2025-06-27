@@ -21,3 +21,16 @@ body.logo-hover-work .logo-text-two {
 body.logo-hover-connect .logo-text-two {
     color: var(--bg-red);
 }
+
+
+body.logo-hover-craft .bugs {
+    color: var(--bg-pink);
+}
+
+body.logo-hover-about .bugs {
+    color: var(--bg-orange);
+}
+
+body.logo-hover-connect-nav .bugs {
+    color: var(--bg-green);
+}

@@ -32,3 +32,7 @@ import './contact.css'
 import './skeleton.css'
 
 import './preLoader.css'
+
+import './Testimonials.css'
+
+import './notFound.css'

@@ -60,10 +60,10 @@ export const BookingForm: React.FC<BookingFormProps> = ({ event, availability })
     }, [selectedTime, setValue]);
 
     // Create booking mutation hook
-    const { mutateAsync: createBooking, status, data, error } = useCreateBooking();
+    const { mutateAsync: createBooking, status, data } = useCreateBooking();
     const isCreatingBooking = status === "pending";
 
-    console.log(error);
+
 
 
     // Form submission handler
@@ -207,10 +207,10 @@ export const BookingForm: React.FC<BookingFormProps> = ({ event, availability })
                         {errors.email && <p className="error-msg">{errors.email.message}</p>}
                     </div>
                     <div>
-                        <textarea {...register("additionalInfo")} placeholder="Additional Information" />
+                        <textarea {...register("additionalInfo")} placeholder="What should we know before getting on the call" />
                     </div>
                     <button type="submit" disabled={isCreatingBooking} className="submit-btn">
-                        {isCreatingBooking ? "Scheduling..." : "Schedule Event"}
+                        {isCreatingBooking ? "Scheduling..." : "Schedule Meeting"}
                     </button>
                 </form>
             )}

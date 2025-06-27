@@ -51,6 +51,14 @@ body {
   --bg-pink: #F38BA3;
   --bg-green: #0BA95B;
   --bg-blue: #0EA4D1;
+  --bg-yellow-light: #E9A135;
+  --bg-yellow-medium: #CA8216;
+  --bg-yellow-dark: #935F10;
+
+
+  --bg-red-light: #ED1D38;
+  --bg-red-medium: #D0112A;
+  --bg-red-dark: #AA0E23;
   --fontSize-h1: clamp(1.8rem, 2vw + 1rem, 3rem);
 }
 
@@ -80,6 +88,18 @@ button {
 
 .bg-blue {
   color: var(--bg-blue);
+}
+
+.bg-yellow-light {
+  color: #EDB25A;
+}
+
+.bg-yellow-dark {
+  color: #DC8E18;
+}
+
+.bg-yellow-medium {
+  color: #E9A135;
 }
 
 

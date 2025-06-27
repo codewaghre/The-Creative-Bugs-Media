@@ -1,0 +1,53 @@
+
+
+{
+    "logo" : {
+        "to": "https://www.google.co.in/",
+        "h1": "Creative",
+        "h2": "BUG'S"
+    },
+
+
+    "navLinkWork" : {
+        "id": "1",
+        "className" : "footer-box-seven",
+        "to": "/work",
+        "target" : "blank",
+        "h1": "Work."
+    }, 
+
+    "navLinkConnect" : {
+        "id": "2",
+        "className" : "footer-box-eight",
+        "to": "https://www.google.co.in/",
+        "target" : "blank",
+        "h1": "Connect."
+    }, 
+
+    "navLinkAbout" : {
+        "id": "3",
+        "className" : "footer-box-nine",
+        "to": "https://www.google.co.in/",
+        "target" : "blank",
+        "h1": "About."
+    },
+
+    "socials" : [
+        {
+            "id": "1",
+            "className" : "footer-box-twelve",
+            "to": "https://www.google.co.in/",
+            "target" : "blank",
+            "h1": "LinkedIn"
+        }, 
+        {
+            "id": "2",
+            "className" : "footer-box-thirteen",
+            "to":"mailto:ops.creativebugs@gmail.com",
+            "target" : "blank",
+            "h1": "cretivebugsmedia@gmail.com"
+        }
+    ],
+
+    "lottie" : "/lottie/india.json"
+}

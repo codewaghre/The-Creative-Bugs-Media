@@ -2,10 +2,14 @@ import { useRef } from 'react';
 import Video from '@/components/Video';
 
 interface Props {
+    video: string
+    reelTwo: string
+    reelOne: string
+    hashImg: string
     filter?: string
 }
 
-const CraftVideoOne = ({ filter }: Props) => {
+const CraftVideoOne = ({ filter, reelOne, reelTwo, hashImg, video }: Props) => {
 
     const podcastRef = useRef<HTMLVideoElement | null>(null);
     const reelOneRef = useRef<HTMLVideoElement | null>(null);
@@ -39,8 +43,8 @@ const CraftVideoOne = ({ filter }: Props) => {
                     >
                         <Video
                             ref={podcastRef}
-                            src="/videos/podcast/p1.mp4"
-                            hashImg="L29tJvt700t7IUIU~q-;00_3%MIU"
+                            src={video}
+                            hashImg={hashImg}
                         />
                     </div>
                 </div>
@@ -53,8 +57,8 @@ const CraftVideoOne = ({ filter }: Props) => {
                     >
                         <Video
                             ref={reelOneRef}
-                            src="/videos/reel/r1.mp4"
-                            hashImg="L29tJvt700t7IUIU~q-;00_3%MIU"
+                            src={reelOne}
+                            hashImg={hashImg}
                         />
 
                     </div>
@@ -68,8 +72,8 @@ const CraftVideoOne = ({ filter }: Props) => {
                     >
                         <Video
                             ref={reelTwoRef}
-                            src="/videos/reel/r1.mp4"
-                            hashImg="L29tJvt700t7IUIU~q-;00_3%MIU"
+                            src={reelTwo}
+                            hashImg={hashImg}
                         />
                     </div>
                 </div>

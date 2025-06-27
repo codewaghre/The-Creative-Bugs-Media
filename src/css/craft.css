@@ -8,7 +8,7 @@
 
 /* Craft bottom -one css */
 .craft-bottom-one {
-    margin-block: 3rem;
+    margin-block-start: 3rem;
     display: grid;
     grid-template-columns: repeat(23, 1fr);
     grid-template-rows: repeat(12, 20px);
@@ -118,7 +118,6 @@
     }
 
     .video-one {
-
         .video-container {
             padding-inline: 10px;
             padding-block: 10px;
@@ -127,7 +126,6 @@
 
     .reel-two,
     .reel-one {
-
         .reel-container {
             padding-inline: 10px;
             padding-block: 10px;
@@ -167,7 +165,6 @@
 
 
 /* Craft top box */
-
 .craft-top {
     width: 100%;
     display: flex;
@@ -206,110 +203,11 @@
 }
 
 
-.craft-gallery {
-    display: grid;
-    margin-block-start: 0.8rem;
-    grid-template-columns: repeat(25, 1fr);
-    grid-template-rows: repeat(16, 20px);
-    gap: 10px;
-}
-
-
-.craft-gallery {
-    [class^="craft-img-"] {
-        height: 100%;
-        width: 100%;
-        filter: grayscale(100%);
-        overflow: hidden;
-        border-radius: 16px;
-        transition: filter 0.5s ease;
-
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(100%);
-            transition: filter 0.5s ease;
-            transition: scale 0.5s ease;
-
-
-        }
-
-        &:hover {
-            filter: grayscale(0%);
-
-            img {
-                filter: grayscale(0%);
-                scale: 1.1;
-
-            }
-        }
-    }
-}
-
-
-.craft-img-one {
-    grid-area: 1 / 2 /12/ 6;
-}
-
-.craft-img-two {
-    grid-area: 12 / 2 / -1/ 6;
-}
-
-.craft-img-three {
-    grid-area: 2 / 6 / -1/ 11;
-}
-
-.craft-img-four {
-    grid-area: 4 / 11 / 14/ 16;
-}
-
-.craft-img-five {
-    grid-area: 2 / 16 / -1/ 21;
-}
-
-.craft-img-six {
-    grid-area: 1 / 21 / 12/ 25;
-}
-
-.craft-img-seven {
-    grid-area: 12 / 21 / -1/ 25;
-}
-
-.craft-img-eight {
-    grid-area: 14 / 11 / -1/ 16;
-    height: 100%;
-    font-size: 1.2rem;
-    font-weight: 600;
-
-    button {
-        background-color: var(--nav-bg-color);
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        color: var(--text-color);
-        transition: font-size 0.5s ease, color 0.5s ease, background-color 0.5s ease;
-
-        &:hover {
-            font-size: 1.3rem;
-            /* background-color: var(--text-color); */
-            color: var(--bg-orange);
-        }
-
-    }
-}
-
-
 @media (min-width: 320px) and (max-width: 700px) {
 
     .head-one,
     .head-three {
         display: none;
-
     }
 
     .head-two {
@@ -318,106 +216,11 @@
     }
 }
 
-@media (min-width: 500px) and (max-width: 900px) {
-
-    .craft-img-one {
-        grid-area: 1 / 2 /12/ 9;
-    }
-
-    .craft-img-two {
-        grid-area: 12 / 2 / -1/ 9;
-    }
-
-    .craft-img-three {
-        display: none;
-    }
-
-    .craft-img-four {
-        grid-area: 4 / 9 / 14/ 17;
-    }
-
-    .craft-img-five {
-        display: none;
-    }
-
-    .craft-img-six {
-        grid-area: 1 / 17 / 12/ 25;
-    }
-
-    .craft-img-seven {
-        grid-area: 12 / 17 / -1/ 25;
-    }
-
-    .craft-img-eight {
-        grid-area: 14 / 9 / -1/ 17;
-
-        font-size: 1rem;
-
-        button {
-            padding-inline: 1rem;
-            gap: 3px !important;
-
-            span {
-                display: none;
-            }
-        }
-    }
-}
-
-@media (min-width: 900px) and (max-width: 1300px) {
-    .craft-img-eight {
-
-
-        font-size: 1rem;
-
-        button {
-            padding-inline: 0.5rem;
-            gap: 8px;
-        }
-    }
-}
-
-@media (min-width: 320px) and (max-width: 500px) {
-
-    .craft-img-one,
-    .craft-img-two,
-    .craft-img-three,
-    .craft-img-seven,
-    .craft-img-five,
-    .craft-img-six {
-        display: none;
-    }
-
-
-    .craft-img-four {
-        grid-area: 2 / 2 / 14/ 25;
-    }
-
-
-    .craft-img-eight {
-        grid-area: 14 / 2 / -1/ 25;
-
-        font-size: 1rem;
-
-        button {
-            padding-inline: 1rem;
-            gap: 3px !important;
-
-            span {
-                display: none;
-            }
-        }
-    }
-}
-
-
-
 /* Craft Para css */
-
 .craft-para {
     text-align: center;
     margin-block-start: 3rem;
-    padding-inline: 5rem;
+    padding-inline: 8rem;
     font-size: 1.2rem;
 
     p {
@@ -427,6 +230,7 @@
 
 .craft-para :nth-child(2) {
     margin-block: 1rem;
+    color: var(--bg-green);
 }
 
 .bg-yellow {
@@ -435,7 +239,7 @@
 
 @media (min-width: 320px) and (max-width: 500px) {
     .craft-para {
-        text-align: start;
+        text-align: center;
         margin-block-start: 3rem;
         padding-inline: 1rem;
         font-size: 0.8rem;
@@ -444,47 +248,9 @@
 
 @media (min-width: 500px) and (max-width: 900px) {
     .craft-para {
-        text-align: start;
+        text-align: center;
         margin-block-start: 3rem;
         padding-inline: 1.2rem;
         font-size: 0.9rem;
-    }
-}
-
-/* gallery-para start */
-.gallery-para {
-    font-size: 1.5rem;
-    width: 100%;
-    margin-inline: auto;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-
-    h1 {
-        span {
-            padding-inline: 1rem;
-        }
-    }
-}
-
-@media (min-width: 320px) and (max-width: 550px) {
-    .gallery-para {
-        display: none;
-    }
-}
-
-@media (min-width: 550px) and (max-width: 900px) {
-    .gallery-para {
-        font-size: 1rem;
-        width: 100%;
-        font-weight: 500;
-        display: flex;
-        justify-content: center;
-
-        h1 {
-            span {
-                padding-inline: 0.2rem;
-            }
-        }
     }
 }

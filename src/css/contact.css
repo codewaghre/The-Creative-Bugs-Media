@@ -174,7 +174,6 @@
     background-color: var(--craft-bg);
     width: 30%;
 
-
     p {
         color: var(--para-color);
     }
@@ -210,7 +209,6 @@
 
 
 /* Booking page - contact main page */
-
 .booking-page {
     display: flex;
     flex-direction: column;
@@ -267,4 +265,77 @@
     }
 
 
+}
+
+
+/* connect para */
+.connect-para {
+    margin-block-start: 0.8rem;
+    width: 70%;
+    margin-inline: auto;
+    text-align: center;
+
+    p {
+        color: var(--para-color);
+        font-size: 1.1rem;
+        padding-block-end: 0.5rem;
+    }
+
+    span {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+
+    .connect-para {
+        width: 80%;
+        margin-inline: auto;
+        text-align: center;
+
+        p {
+            font-size: 0.9rem;
+            padding-block-end: 1rem;
+        }
+
+        span {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+
+    .connect-para {
+        width: 80%;
+        margin-inline: auto;
+        text-align: center;
+
+        p {
+            font-size: 1rem;
+            padding-block-end: 1rem;
+        }
+
+        span {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1400px) {
+
+    .connect-para {
+        width: 80%;
+        margin-inline: auto;
+        text-align: center;
+
+        p {
+            font-size: 1.1rem;
+            padding-block-end: 0.8rem;
+        }
+
+        span {
+            font-size: 1.1rem;
+        }
+    }
 }

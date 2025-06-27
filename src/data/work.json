@@ -1,0 +1,28 @@
+
+
+{
+    "p1": "At The Creative Bugs Media, every frame is a canvas, and every project is a masterpiece in motion. With a fearless blend of storytelling and visual design, our Craft Project embodies the soul of cinematic expression — where color, sound, and rhythm collide to craft unforgettable narratives.",
+    "p2": "Transforming ideas into captivating realities, one project at a time.",
+
+    "hashImg" : "L29tJvt700t7IUIU~q-;00_3%MIU",
+
+    "craftOne" : {
+        "video": "/videos/podcast/p1.mp4",
+        "reelOne":  "/videos/reel/r1.mp4",
+        "reelTwo": "/videos/reel/r1.mp4"
+    },
+
+    "craftTwo" : {
+        "video": "/videos/podcast/p1.mp4",
+        "reelOne":  "/videos/reel/r1.mp4",
+        "reelTwo": "/videos/reel/r1.mp4"
+    },
+
+    "craftThree" : {
+        "video": "/videos/podcast/p1.mp4",
+        "reelOne":  "/videos/reel/r1.mp4",
+        "reelTwo": "/videos/reel/r1.mp4"
+    },
+
+    "lottieOne" : "/lottie/run.json"
+}

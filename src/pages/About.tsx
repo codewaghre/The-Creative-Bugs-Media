@@ -5,13 +5,19 @@ import Heading from "@/components/Heading"
 import SVGComponent from "@/components/SVGComponent";
 import Tilt from 'react-parallax-tilt';
 
+import aboutusHeading from '../data/heading.json'
+import about from '../data/about.json'
+
 const About = () => {
+    const { one, two, oneColor, twoColor } = aboutusHeading.aboutus
     return (
         <main className="about">
             <div className="about-heading">
                 <Heading
-                    one={"Who We Are Is What We Create"}
-                    oneColor={"var(--bg-orange)"}
+                    one={one}
+                    oneColor={oneColor}
+                    two={two}
+                    twoColor={twoColor}
                 />
             </div>
 
@@ -25,20 +31,14 @@ const About = () => {
                             <SVGComponent />
                         </div>
                     </Tilt>
-
                 </div>
 
                 <div className="about-box-one">
-                    At The Creative Bugs Media, we believe creativity is in the details — and like the tiniest bugs in the digital world, we’re always crawling through pixels, frames, and soundwaves to find what truly makes a story stick.
+                    <p>{about.content.p1}</p>
                 </div>
 
                 <div className="about-box-two">
-                    At The Creative Bugs Media, we believe creativity is in the details — and like the tiniest bugs in the digital world, we’re always crawling through pixels, frames, and soundwaves to find what truly makes a story stick.
-                </div>
-
-                <div className="about-box-three"><a href="">X</a>
-                    <img className="about-box-img" src="/bg.png" alt="Background" />
-
+                    <p>{about.content.p2}</p>
                 </div>
 
                 <div className="about-box-four">
@@ -49,11 +49,21 @@ const About = () => {
                 <div className="about-box-five"><a href="">Instagram</a>
                     <img className="about-box-img" src="/bg.png" alt="Background" />
                 </div>
+
                 <div className="about-box-six">
-                    <p>At The Creative Bugs, we don’t just produce. We collaborate. adapt. craft.
+                    <p>
+                        {about.content.p3.map((part, i) =>
+                            typeof part === 'string' ? (
+                                part
+                            ) : (
+                                <span key={i} className={part.className}>
+                                    {part.text}
+                                </span>
+                            )
+                        )}
                     </p>
-                    <p> And above all — we create <span className="bg-red">content that bites.</span></p>
                 </div>
+
                 <div className="about-box-nine"></div>
                 <div className="about-box-ten"></div>
                 <div className="about-box-eleven"></div>
@@ -63,6 +73,7 @@ const About = () => {
             <div>
                 <Dummy width={"77%"} />
             </div>
+
         </main>
     );
 };

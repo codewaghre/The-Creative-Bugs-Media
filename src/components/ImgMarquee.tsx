@@ -33,6 +33,7 @@ function ImgMarquee({ images, from, to }: Props) {
     useEffect(() => {
         startAnimation();
     }, []);
+
     return (
         <>
             <div

@@ -76,22 +76,11 @@
 
 }
 
-/* .number-text-one {
-    color: var(--bg-orange);
-}
 
-.number-text-two {
-    color: var(--bg-red);
-}
-
-.number-text-three {
-    color: var(--bg-pink);
-} */
 
 
 /* Media Queries  */
 @media (min-width: 320px) and (max-width: 500px) {
-
 
     .numbers {
         padding-block-start: 2rem;

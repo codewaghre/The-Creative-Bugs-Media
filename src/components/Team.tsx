@@ -5,8 +5,11 @@ import { FaArrowLeft } from "react-icons/fa";
 import teamData from '../data/team.json'
 import { useState } from "react";
 
+import teamHeading from '../data/heading.json'
 
 const Team = () => {
+
+    const { one, oneColor, two, twoColor } = teamHeading.team
 
     const [index, setIndex] = useState(0);
     const [imgOne, setImgOne] = useState(1);
@@ -69,8 +72,10 @@ const Team = () => {
 
                 <div>
                     <Heading
-                        one={"Meet the Bugs Team"}
-                        oneColor={"var(--bg-red)"}
+                        one={one}
+                        oneColor={oneColor}
+                        two={two}
+                        twoColor={twoColor}
                     />
                 </div>
 
@@ -86,7 +91,6 @@ const Team = () => {
                             <div className="team-info">
                                 <h1 className="font-paytone">{member.name}</h1>
                                 <p>{member.role}</p>
-
                                 <p>{member.description}</p>
                             </div>
                         </div>

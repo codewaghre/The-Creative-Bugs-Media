@@ -1,0 +1,41 @@
+{
+    "content": {
+        "p1": "We started as content creators. We became the agency we wished existed — one that actually understands what founders need from social media.",
+        "p2": "Instead of offering generic deliverables, we work backwards from the real problem. Not just “making videos” — but getting the right content in front of the right people, on the right platforms, at the right time.",
+        "p3": [
+            "We believe social media isn’t about noise — it’s about ",
+            { "text": "clarity, ", "className": "bg-green" },
+            { "text": "consistency, ", "className": "bg-green" },
+            "and a",
+            { "text": "deep understanding ", "className": "bg-green" },
+            "of who you’re talking to."
+        ],
+            
+        "p4": "In 2020, while building our own content on YouTube, we met brands that had a great product — but zero idea how to communicate it online.CreativeBugs was born to fill that gap."
+    },
+
+    "socialsLinks" : [
+        {
+            "id": "1",
+            "className": "nav-about-box-eight",
+            "linkName": "Instagram",
+            "link": "https://www.google.com/",
+            "img": "/bg.png"
+        },
+
+        {
+            "id": "2",
+            "className": "nav-about-box-nine",
+            "linkName": "LinkedIn",
+            "link": "https://www.google.com/",
+            "img": "/bg.png"
+        },
+        {
+            "id": "3",
+            "className": "nav-about-box-ten",
+            "linkName": "Email",
+            "link": "mailto:ops.creativebugs@gmail.com",
+            "img": "/bg.png"
+        }
+    ]
+}

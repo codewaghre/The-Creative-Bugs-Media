@@ -1,0 +1,41 @@
+
+{
+
+    "p1" : [
+        "From scroll-stopping reels to soul-stirring documentaries, we blend imagination, strategy, and craft to bring every idea to life — frame by frame, beat by beat. Whether you're launching a brand, telling a story, or just vibing with your audience — ",
+        { "text": " we’re the creative crew you've been looking for.", "className": "bg-green" }
+    ],
+
+    "services": [
+    {
+      "id": "1",
+      "className": "service-container-one",
+      "h1": "Editing & Post-Production",
+      "p": "short-form magic, long-form energy"
+    },
+    {
+      "id": "2",
+      "className": "service-container-two",
+      "h1": "Video Production",
+      "p": "short-form magic"
+    },
+    {
+      "id": "3",
+      "className": "service-container-three",
+      "h1": "Video Production",
+      "p": "short-form magic"
+    },
+    {
+      "id": "4",
+      "className": "service-container-four",
+      "h1": "Editing & Post-Production",
+      "p": "short-form magic, long-form energy"
+    },
+    {
+      "id": "5",
+      "className": "service-container-six",
+      "h1": "Animation & Motion Graphics",
+      "p": "short-form magic, long-form energy"
+    }
+  ]
+}

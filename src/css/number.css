@@ -76,8 +76,8 @@
     }
 }
 
-.stata-data-container :nth-child(3) {
-    padding-block-end: 2rem;
+.stata-data-container :nth-child(2) {
+    padding-block-end: 1.5rem;
 }
 
 

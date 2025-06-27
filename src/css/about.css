@@ -3,7 +3,6 @@
 }
 
 
-
 /* abotu grid start */
 .about-grid {
     margin-block-start: 0rem;
@@ -20,7 +19,6 @@
 
 .about-box-ten {
     grid-area: 9/ 1/ 17/-1;
-
 }
 
 .about-box-eleven {
@@ -43,22 +41,15 @@
     border-inline-start: 2px var(--dotted-border-color) dashed;
 }
 
-.about-box-three {
-    grid-area: 17/ 4/ 22/7;
-    border-inline-start: 2px var(--dotted-border-color) dashed;
-    position: relative;
-}
-
 .about-box-four {
-    grid-area: 17/ 7/ 22/10;
+    grid-area: 17/ 4/ 22/9;
     border-inline: 2px var(--dotted-border-color) dashed;
     position: relative;
 }
 
 .about-box-five {
-    grid-area: 17/ 10/ 22/14;
+    grid-area: 17/ 9/ 22/14;
     position: relative;
-
 }
 
 .about-box-six {
@@ -67,8 +58,6 @@
     text-align: center;
     align-content: center;
     padding-block: 2rem;
-    /* background-color: rgba(240, 248, 255, 0.221); */
-
 }
 
 .about-box-seven {
@@ -86,7 +75,6 @@
         align-content: center;
 
     }
-
 }
 
 .tilt-about {
@@ -180,11 +168,12 @@
     }
 
     .about-box-four {
-        grid-area: 18/ 10/ 23/17;
+        grid-area: 18/ 4/ 23/14;
+        position: relative;
     }
 
     .about-box-five {
-        grid-area: 18/ 17/ 23/24;
+        grid-area: 18/ 14/ 23/24;
         position: relative;
         border-inline-end: 2px var(--dotted-border-color) dashed;
     }
@@ -238,11 +227,12 @@
     }
 
     .about-box-four {
-        grid-area: 17/ 10/ 22/17;
+        grid-area: 17/ 4/ 22/14;
+        position: relative;
     }
 
     .about-box-five {
-        grid-area: 17/ 17/ 22/24;
+        grid-area: 17/ 14/ 22/24;
         position: relative;
         border-inline-end: 2px var(--dotted-border-color) dashed;
     }
@@ -250,7 +240,6 @@
     .about-box-six {
         grid-area: 22/ 4/ -1/24;
         border-inline: 2px var(--dotted-border-color) dashed;
-
     }
 
     .about-box-seven {
@@ -292,11 +281,11 @@
     }
 
     .about-box-four {
-        grid-area: 17/ 9/ 22/17;
+        grid-area: 17/ 2/ 22/14;
     }
 
     .about-box-five {
-        grid-area: 17/ 17/ 22/26;
+        grid-area: 17/ 14/ 22/26;
         position: relative;
         border-inline-end: 2px var(--dotted-border-color) dashed;
     }
