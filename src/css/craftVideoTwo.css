@@ -44,6 +44,7 @@
     .work-video-one {
         grid-area: 1 / 1 /13/ end;
         align-content: center;
+        border-block-end: 2px var(--dotted-border-color) dashed;
 
         .video-container {
             padding: 20px !important;
@@ -52,8 +53,7 @@
 
     .work-reel-one {
         grid-area: 13 / 1 /end/ end;
-        border-inline-start: none;
-        border-block-start: 2px var(--dotted-border-color) dashed;
+        border: none;
 
         .reel-container {
             padding: 20px;

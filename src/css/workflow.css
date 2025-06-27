@@ -58,7 +58,6 @@
 }
 
 
-
 .tilt {
     overflow: hidden;
     border-radius: 12px;
@@ -192,6 +191,7 @@
 /* Carousel behavior for medium screens */
 @media (max-width: 1100px) and (min-width: 500px) {
     .workflow-card {
+        width: 90%;
         overflow-x: auto !important;
         overflow-y: hidden;
         flex-wrap: nowrap;
@@ -204,8 +204,21 @@
         justify-content: flex-start;
     }
 
+    .workflow-card-one,
+    .workflow-card-two,
+    .workflow-card-three {
+        background-color: var(--craft-bg);
+        border-radius: 12px;
+        display: flex;
+        /* width: 80%; */
+        flex-direction: column;
+        gap: 20px;
+        block-size: 530px;
+        padding-block: 2rem;
+    }
+
     .workflow-card>.tilt {
-        flex: 0 0 80%;
+        flex: 0 0 360px;
         scroll-snap-align: center;
         box-sizing: border-box;
         margin-right: 1rem;
