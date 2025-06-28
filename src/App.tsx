@@ -2,7 +2,7 @@ import './App.css'
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+// import { HelmetProvider } from 'react-helmet-async';
 
 import Navbar from './components/Navbar';
 import Index from './Routes/Index';
@@ -25,26 +25,26 @@ function App() {
 
   return (
     <>
-      <HelmetProvider>
+      {/* <HelmetProvider> */}
 
-        <Router>
-          {!loadingComplete && <PreLoader onComplete={() => setLoadingComplete(true)} />}
-          {loadingComplete && (
-            <>
-              <Navbar />
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/work" element={<Work />} />
-                <Route path="/contact" element={<Connect username={username} eventId={eventId} />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-              <Footer />
-            </>
-          )}
-        </Router >
+      <Router>
+        {!loadingComplete && <PreLoader onComplete={() => setLoadingComplete(true)} />}
+        {loadingComplete && (
+          <>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/work" element={<Work />} />
+              <Route path="/contact" element={<Connect username={username} eventId={eventId} />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+            <Footer />
+          </>
+        )}
+      </Router >
 
-      </HelmetProvider>
+      {/* </HelmetProvider> */}
 
     </>
   )
