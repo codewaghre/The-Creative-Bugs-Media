@@ -14,6 +14,8 @@ import PreLoader from './pages/PreLoader';
 
 import NotFound from './pages/NotFound';
 
+import { Toaster } from 'react-hot-toast';
+
 
 const username = import.meta.env.VITE_USERNAME;
 const eventId = import.meta.env.VITE_EVENT_ID;
@@ -26,6 +28,8 @@ function App() {
   return (
     <>
       <HeadProvider>
+
+        <Toaster position="bottom-center" reverseOrder={false} />
 
         <Router>
           {!loadingComplete && <PreLoader onComplete={() => setLoadingComplete(true)} />}

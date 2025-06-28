@@ -3,6 +3,7 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import { Link } from 'react-router-dom';
 
 import footer from '../data/footer.json'
+import toast from "react-hot-toast";
 
 const Footer = () => {
 
@@ -13,11 +14,42 @@ const Footer = () => {
         setEmail(e.target.value);
     };
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    const emailKey = import.meta.env.VITE_EMAIL
+
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log('Submitted Email:', email);
-        alert(`Email submitted: ${email}`);
+
         // You can add further logic like API call here
+        const formData = new FormData();
+        formData.append("access_key", emailKey);
+        formData.append("subject", "New Subscriber");
+        formData.append("email", email);
+        formData.append("message", `New subscriber is with email: ${email}`);
+
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: json,
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                toast.success("Subscription successful!")
+                setEmail("");
+            } else {
+                toast.error("Subscription failed. Please try again.")
+            }
+        } catch (error) {
+            console.error("Web3Forms Error:", error);
+            toast.error("Something went wrong. Please try again later.")
+        }
     };
 
     // handle Craft Nav 
