@@ -5,7 +5,7 @@ import Team from '@/components/Team'
 import about from '../data/about.json'
 import aboutHeading from '../data/heading.json'
 
-import { Helmet } from 'react-helmet-async';
+// import { Helmet } from 'react-helmet-async';
 
 
 
@@ -16,7 +16,7 @@ const About = () => {
     return (
         <main className='nav-about content-container'>
 
-            <Helmet>
+            {/* <Helmet>
                 <title>About Us | Creative Bugs Media</title>
                 <meta name="description" content="Meet the team behind Creative Bugs Media. Learn how we craft powerful visual stories that connect with audiences and elevate brands." />
                 <link rel="canonical" href="https://the-creative-bugs-media.vercel.app/about" />
@@ -40,7 +40,7 @@ const About = () => {
                         }
                     })}
                 </script>
-            </Helmet>
+            </Helmet> */}
 
             <div>
                 <Heading

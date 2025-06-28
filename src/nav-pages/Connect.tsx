@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 
-import { Helmet } from 'react-helmet-async';
+// import { Helmet } from 'react-helmet-async';
 
 import { useGetEventDetails } from '../api/useGetEventDetails';
 import { useGetEventAvailability } from '../api/useGetEventAvailability ';
@@ -41,7 +41,7 @@ const EventComponent = ({ username, eventId }: EventComponentProps) => {
 
         <>
 
-            <Helmet>
+            {/* <Helmet>
                 <title>Contact Us | Creative Bugs Media</title>
                 <meta name="description" content="Connect with Creative Bugs Media for your next video project. Reach out to discuss your vision, timeline, and creative needs." />
                 <link rel="canonical" href="https://the-creative-bugs-media.vercel.app/contact" />
@@ -69,7 +69,7 @@ const EventComponent = ({ username, eventId }: EventComponentProps) => {
                         }
                     })}
                 </script>
-            </Helmet>
+            </Helmet> */}
 
             <header>
                 <Heading
