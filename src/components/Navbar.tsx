@@ -131,12 +131,12 @@ const Navbar = () => {
                         aria-label="Connect"
                     >
                         <Link
-                            to={"/connect"}
-                            aria-current={location.pathname === "/connect" ? "page" : undefined}
+                            to={"/contact"}
+                            aria-current={location.pathname === "/contact" ? "page" : undefined}
                             aria-label="Connect with Us"
                         >
                             Connect with Us.
-                            {location.pathname === "/connect" && <span className="sr-only">(current page)</span>}
+                            {location.pathname === "/contact" && <span className="sr-only">(current page)</span>}
                         </Link>
                     </li>
 

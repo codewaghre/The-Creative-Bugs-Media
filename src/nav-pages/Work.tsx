@@ -5,7 +5,8 @@ import Heading from "@/components/Heading"
 import craftHeading from '../data/heading.json'
 import work from '../data/work.json'
 
-// import { Helmet } from 'react-helmet-async';
+import { Title, Meta, Link as HeadLink } from 'react-head';
+
 
 const Work = () => {
 
@@ -13,29 +14,8 @@ const Work = () => {
     const { p1, p2, hashImg, craftOne, craftThree, craftTwo } = work
     return (
         <>
+            <WorkPageSEO />
             <main className="work">
-
-                {/* <Helmet>
-                    <title>Our Work | Creative Bugs Media</title>
-                    <meta name="description" content="Explore our portfolio of video editing and production projects including reels, music videos, commercials, and corporate content." />
-                    <link rel="canonical" href="https://the-creative-bugs-media.vercel.app/work" />
-                    <meta property="og:title" content="Our Work | Creative Bugs Media" />
-                    <meta property="og:description" content="Browse our curated selection of projects — from brand films to YouTube content and short-form reels." />
-                    <meta property="og:url" content="https://the-creative-bugs-media.vercel.app/work" />
-                    <meta property="og:image" content="https://the-creative-bugs-media.vercel.app/creativeBugsMedia.webp" />
-                    <meta name="twitter:title" content="Our Work | Creative Bugs Media" />
-                    <meta name="twitter:description" content="See how we transform ideas into powerful, polished video content." />
-                    <meta name="twitter:image" content="https://the-creative-bugs-media.vercel.app/creativeBugsMedia.webp" />
-                    <script type="application/ld+json">
-                        {JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "CollectionPage",
-                            "name": "Creative Bugs Media Portfolio",
-                            "description": "A curated showcase of our best video editing and production projects.",
-                            "url": "https://the-creative-bugs-media.vercel.app/work"
-                        })}
-                    </script>
-                </Helmet> */}
 
                 <div>
                     <Heading
@@ -71,3 +51,37 @@ const Work = () => {
 }
 
 export default Work
+
+
+
+
+const WorkPageSEO = () => (
+    <>
+        <Title>Our Work | Creative Bugs Media</Title>
+        <Meta name="description" content="Explore our portfolio of video editing and production projects including reels, music videos, commercials, and corporate content." />
+        <HeadLink rel="canonical" href="https://www.the-creative-bugs.vercel.app/work" />
+        <Meta property="og:title" content="Our Work | Creative Bugs Media" />
+        <Meta property="og:description" content="Browse our curated selection of projects — from brand films to YouTube content and short-form reels." />
+        <Meta property="og:url" content="https://www.the-creative-bugs.vercel.app/work" />
+        <Meta property="og:image" content="https://www.the-creative-bugs.vercel.app/creativeBugsMedia.jpg" />
+        <Meta name="twitter:title" content="Our Work | Creative Bugs Media" />
+        <Meta name="twitter:description" content="See how we transform ideas into powerful, polished video content." />
+        <Meta name="twitter:image" content="https://www.the-creative-bugs.vercel.app/creativeBugsMedia.jpg"
+        />
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "CollectionPage",
+                    "name": "Creative Bugs Media Portfolio",
+                    "description":
+                        "A curated showcase of our best video editing and production projects.",
+                    "url": "https://www.the-creative-bugs.vercel.app/work",
+                }),
+            }}
+        />
+    </>
+);
+
+
