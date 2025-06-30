@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
+import home from '../data/home.json'
 
 const words = ["Bold.", "Unique.", "Creative.", "Studio."];
 
 const PreLoader = ({ onComplete }: { onComplete: () => void }) => {
     const [visibleIndex, setVisibleIndex] = useState<number>(-1);
-    const [audio] = useState(() => new Audio("/one.mp3"));
+    const [audio] = useState(() => new Audio(home.audio));
     const [hasInteracted, setHasInteracted] = useState(false);
 
 
@@ -28,18 +29,16 @@ const PreLoader = ({ onComplete }: { onComplete: () => void }) => {
             window.removeEventListener("click", handleUserInteraction);
             window.removeEventListener("scroll", handleUserInteraction);
         };
-    }, [hasInteracted, audio]);
+    }, [hasInteracted]);
 
     useEffect(() => {
-
-
         // Try autoplay audio using muted trick
-        audio.muted = true;
-        audio.play().then(() => {
-            audio.muted = false;
-        }).catch((err) => {
-            console.warn("Audio autoplay blocked:", err);
-        });
+        // audio.muted = true;
+        // audio.play().then(() => {
+        //     audio.muted = false;
+        // }).catch((err) => {
+        //     console.warn("Audio autoplay blocked:", err);
+        // });
 
         let current = 0;
         const interval = setInterval(() => {
@@ -50,12 +49,12 @@ const PreLoader = ({ onComplete }: { onComplete: () => void }) => {
                 clearInterval(interval);
                 setTimeout(() => {
                     onComplete();
-                }, 800);
+                }, 500);
             }
-        }, 800);
+        }, 500);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [audio, onComplete]);
 
     return (
         <div className="preloader-container">

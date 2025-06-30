@@ -1,7 +1,7 @@
 import './App.css'
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { HeadProvider } from 'react-head';
 
 import Navbar from './components/Navbar';
@@ -23,7 +23,20 @@ const eventId = import.meta.env.VITE_EVENT_ID;
 
 function App() {
 
-  const [loadingComplete, setLoadingComplete] = useState(true);
+  const [loadingComplete, setLoadingComplete] = useState(false);
+
+  useEffect(() => {
+    const hasSeenPreloader = sessionStorage.getItem("hasSeenPreloader");
+    if (hasSeenPreloader) {
+      setLoadingComplete(true);
+    }
+  }, []);
+
+  const handlePreloaderComplete = () => {
+    sessionStorage.setItem("hasSeenPreloader", "true");
+    setLoadingComplete(true);
+  };
+
 
   return (
     <>
@@ -32,7 +45,7 @@ function App() {
         <Toaster position="bottom-center" reverseOrder={false} />
 
         <Router>
-          {!loadingComplete && <PreLoader onComplete={() => setLoadingComplete(true)} />}
+          {!loadingComplete && <PreLoader onComplete={handlePreloaderComplete} />}
           {loadingComplete && (
             <>
               <Navbar />
