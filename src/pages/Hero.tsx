@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import homeData from '../data/home.json'
+import { motion } from "motion/react"
 
 const Hero = () => {
 
@@ -21,6 +22,9 @@ const Hero = () => {
   const handleConnectLeave = () => {
     document.body.classList.remove('logo-hover-connect');
   };
+
+
+
   return (
 
     <main className="hero block-gradient">
@@ -40,9 +44,17 @@ const Hero = () => {
           aria-labelledby="hero-heading"
         >
           <div className="hero-heading font-paytone">
-            <h1 id="hero-heading">
+            <motion.h1
+              initial={{ opacity: 0, y: -20, filter: 'blur(8px)' }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                filter: 'blur(0px)',
+              }}
+              transition={{ duration: 0.5 }}
+              id="hero-heading">
               {h1}
-            </h1>
+            </motion.h1>
           </div>
         </section>
 
@@ -51,10 +63,18 @@ const Hero = () => {
           aria-labelledby="hero-stats"
         >
           <div className="hero-para">
-            <p id="hero-stats">
+            <motion.p
+              initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                filter: 'blur(0px)',
+              }}
+              transition={{ duration: 0.5 }}
+              id="hero-stats">
               <strong>{p1_bold}</strong>{p1}<br />
               {p2}
-            </p>
+            </motion.p>
           </div>
         </section>
 
@@ -65,7 +85,14 @@ const Hero = () => {
           <div className="hero-button">
 
             <Link to={"/work"}>
-              <button
+              <motion.button
+                initial={{ opacity: 0, x: -12, filter: 'blur(4px)' }}
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                  filter: 'blur(0px)',
+                }}
+                transition={{ duration: 0.4 }}
                 onMouseEnter={handleWorkEnter}
                 onMouseLeave={handleWorkLeave}
                 onFocus={handleWorkEnter}
@@ -75,11 +102,18 @@ const Hero = () => {
               >
                 {b1}
                 <span className="sr-only"> - View our portfolio</span>
-              </button>
+              </motion.button>
             </Link>
 
             <Link to={"/connect"}>
-              <button
+              <motion.button
+                initial={{ opacity: 0, x: 12, filter: 'blur(4px)' }}
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                  filter: 'blur(0px)',
+                }}
+                transition={{ duration: 0.4 }}
                 className="btn-two-connect"
                 onMouseEnter={handleConnectEnter}
                 onMouseLeave={handleConnectLeave}
@@ -89,13 +123,13 @@ const Hero = () => {
               >
                 {b2}
                 <span className="sr-only"> - Get in touch with our team</span>
-              </button>
+              </motion.button>
             </Link>
 
           </div>
         </section>
-      </div>
-    </main>
+      </div >
+    </main >
   )
 }
 

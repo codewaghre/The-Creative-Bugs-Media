@@ -6,7 +6,7 @@ import about from '../data/about.json'
 import aboutHeading from '../data/heading.json'
 
 import { Title, Meta, Link as HeadLink } from 'react-head';
-
+import { motion } from "motion/react"
 
 
 
@@ -36,16 +36,43 @@ const About = () => {
                     <div className='nav-about-box-two'></div>
                     <div className='nav-about-box-three'></div>
                     <div className='nav-about-box-four'>
-                        <p>{p1}</p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
+                            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                        >
+                            {p1}
+                        </motion.p>
                     </div>
                     <div className='nav-about-box-five'>
-                        <p>{p4}</p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
+                            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                        >
+                            {p4}
+                        </motion.p>
                     </div>
                     <div className='nav-about-box-six'>
-                        <p>{p2}</p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
+                            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                        >
+                            {p2}
+                        </motion.p>
                     </div>
                     <div className='nav-about-box-seven'>
-                        <p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
+                            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            viewport={{ once: true, amount: 0.5 }}
+
+                        >
                             {p3.map((part, i) =>
                                 typeof part === 'string' ? (
                                     part
@@ -55,17 +82,24 @@ const About = () => {
                                     </span>
                                 )
                             )}
-                        </p>
+                        </motion.p>
                     </div>
                     {
                         about.socialsLinks.map((data) => (
-                            <a href={data.link} target='blank' className={data.className}>
+                            <motion.a
+                                initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
+                                whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                                transition={{ duration: 0.5, delay: 0.1 }}
+                                viewport={{ once: true, amount: 0.5 }}
+                                href={data.link}
+                                target='blank'
+                                className={data.className}>
                                 <div key={data.id}>
                                     <img className="about-box-img" src={data.img} alt="Background" />
                                     <a target='blank' href={data.link}>{data.linkName}</a>
 
                                 </div>
-                            </a>
+                            </motion.a>
                         ))
                     }
                     <div className='nav-about-box-eleven'></div>

@@ -6,6 +6,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import { motion } from "motion/react"
+
 const TestimonialsSlider = () => {
 
     const settings = {
@@ -61,7 +63,12 @@ const TestimonialsSlider = () => {
                     {
                         testimonialsData.map((data) => (
 
-                            <div key={data.id} className="testimonials-slider-container">
+                            <motion.div
+                                initial={{ opacity: 0, y: 0, filter: 'blur(6px)' }}
+                                whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                                transition={{ duration: 0.5, delay: 0.1 }}
+                                viewport={{ once: false, amount: 0.4 }}
+                                key={data.id} className="testimonials-slider-container">
                                 <div className='testimonials-data'>
                                     <div>
                                         <p>" {data.testimonial} "</p>
@@ -80,7 +87,7 @@ const TestimonialsSlider = () => {
                                     </div>
                                 </div>
 
-                            </div>
+                            </motion.div>
                         ))
                     }
                 </Slider>

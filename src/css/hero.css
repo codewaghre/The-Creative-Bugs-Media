@@ -94,13 +94,13 @@
     }
 }
 
-.hero-heading:hover {
+/* .hero-heading:hover {
     background: var(--text-color);
     background: radial-gradient(ellipse farthest-corner at center center, var(--text-color) 22%, var(--para-color) 56%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+} */
 
 .hero-para {
     font-size: 1rem;

@@ -1,6 +1,6 @@
-
-
 import { Player } from '@lottiefiles/react-lottie-player';
+import { motion } from "motion/react"
+
 import CraftVideoOne from '@/components/CraftVideoOne';
 import CraftVideoTwo from '@/components/CraftVideoTwo';
 
@@ -33,25 +33,45 @@ const Craft = () => {
                     </div>
 
                     <div className='head-two font-paytone'>
-                        <h1>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
+                            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true, amount: 0.8 }}
+                        >
                             <span className={oneColor}>{one}</span> <span className={twoColor}> {two}</span>
-                        </h1>
+                        </motion.h1>
                     </div>
 
                     <div className='head-three'>
-                        <div className='craft-lottie-two'>
+                        <motion.div
+                            initial={{ opacity: 0, y: 4, filter: 'blur(6px)' }}
+                            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: false, amount: 0.5 }}
+                            className='craft-lottie-two'>
                             <Player
                                 autoplay
                                 loop
                                 src={lottieOne}
                             />
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
 
                 <div className='craft-para'>
-                    <p>{p1}</p>
-                    <p>{p2}</p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
+                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                    >{p1}</motion.p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 6, filter: 'blur(6px)' }}
+                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                    >{p2}</motion.p>
                 </div>
 
                 <div>

@@ -1,6 +1,6 @@
 import { Calendar, Clock } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
+import { motion } from "motion/react"
 
 export interface EventDetails {
     id: string;
@@ -26,7 +26,12 @@ interface EventDetailsProps {
 export default function EventDetails({ event }: EventDetailsProps) {
     const { user } = event;
     return (
-        <div className="event-details">
+        <motion.div
+            initial={{ opacity: 0, y: 2, filter: 'blur(4px)' }}
+            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false, amount: 0.2 }}
+            className="event-details">
             <h1 className="event-title font-paytone">{event.title}</h1>
             <div className="host-info">
                 <Avatar className="w-12 h-12 mr-4">
@@ -47,6 +52,6 @@ export default function EventDetails({ event }: EventDetailsProps) {
                 <span>Google Meet</span>
             </div>
             <p>{event.description}</p>
-        </div>
+        </motion.div>
     );
 }

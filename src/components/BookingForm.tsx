@@ -6,6 +6,7 @@ import { format } from "date-fns";
 import { addMonths, isToday } from 'date-fns';
 import { useCreateBooking } from "../api/useCreateBooking";
 import { bookingSchema } from "../lib/validators";
+import { motion } from "motion/react"
 import "react-day-picker/style.css";
 
 
@@ -133,7 +134,12 @@ export const BookingForm: React.FC<BookingFormProps> = ({ event, availability })
     // Main form UI
     return (
 
-        <div className="booking-container">
+        <motion.div
+            initial={{ opacity: 0, y: 2, filter: 'blur(4px)' }}
+            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false, amount: 0.2 }}
+            className="booking-container">
             <div className="calendar-time-wrapper">
                 <div className="calendar-box">
                     <DayPicker
@@ -214,7 +220,7 @@ export const BookingForm: React.FC<BookingFormProps> = ({ event, availability })
                     </button>
                 </form>
             )}
-        </div>
+        </motion.div>
 
     );
 }

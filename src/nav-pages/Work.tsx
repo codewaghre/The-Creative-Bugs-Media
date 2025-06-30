@@ -7,6 +7,8 @@ import work from '../data/work.json'
 
 import { Title, Meta, Link as HeadLink } from 'react-head';
 
+import { motion } from "motion/react"
+
 
 const Work = () => {
 
@@ -27,8 +29,23 @@ const Work = () => {
                 </div>
 
                 <div className="connect-para">
-                    <p>{p1}</p>
-                    <span className="bg-green">{p2}</span>
+                    <motion.p
+                        initial={{ opacity: 0, y: 6, filter: 'blur(6px)' }}
+                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                    >
+                        {p1}
+                    </motion.p>
+                    <motion.span
+                        initial={{ opacity: 0, y: 6, filter: 'blur(6px)' }}
+                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                        className="bg-green"
+                    >
+                        {p2}
+                    </motion.span>
                 </div>
 
                 <div className="work-container">

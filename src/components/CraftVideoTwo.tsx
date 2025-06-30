@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import Video from '@/components/Video';
+import { motion } from "motion/react"
 
 interface Props {
     video: string
@@ -34,7 +35,11 @@ const CraftVideoTwo = ({ filter, reelOne, reelTwo, hashImg, video }: Props) => {
             <div className="work-bottom-two">
 
                 <div className="work-video-one">
-                    <div
+                    <motion.div
+                        initial={{ opacity: 0, y: 2, filter: 'blur(2px)' }}
+                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        viewport={{ once: false, amount: 0.5 }}
                         className={`video-container ${filter || ''}`}
                         onMouseEnter={() => handleMouseEnter(podcastRef.current)}
                         onMouseLeave={() => handleMouseLeave(podcastRef.current)}
@@ -44,11 +49,15 @@ const CraftVideoTwo = ({ filter, reelOne, reelTwo, hashImg, video }: Props) => {
                             src={video}
                             hashImg={hashImg}
                         />
-                    </div>
+                    </motion.div>
                 </div>
 
                 <div className="work-reel-one">
-                    <div
+                    <motion.div
+                        initial={{ opacity: 0, y: 2, filter: 'blur(2px)' }}
+                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.3, delay: 0.2, ease: "easeInOut" }}
+                        viewport={{ once: false, amount: 0.5 }}
                         className={`reel-container ${filter || ''}`}
                         onMouseEnter={() => handleMouseEnter(reelOneRef.current)}
                         onMouseLeave={() => handleMouseLeave(reelOneRef.current)}
@@ -59,11 +68,15 @@ const CraftVideoTwo = ({ filter, reelOne, reelTwo, hashImg, video }: Props) => {
                             hashImg={hashImg}
                         />
 
-                    </div>
+                    </motion.div>
                 </div>
 
                 <div className="work-reel-two">
-                    <div
+                    <motion.div
+                        initial={{ opacity: 0, y: 2, filter: 'blur(2px)' }}
+                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.3, delay: 0.1, ease: "easeInOut" }}
+                        viewport={{ once: false, amount: 0.5 }}
                         className={`reel-container ${filter || ''}`}
                         onMouseEnter={() => handleMouseEnter(reelTwoRef.current)}
                         onMouseLeave={() => handleMouseLeave(reelTwoRef.current)}
@@ -73,7 +86,7 @@ const CraftVideoTwo = ({ filter, reelOne, reelTwo, hashImg, video }: Props) => {
                             src={reelTwo}
                             hashImg={hashImg}
                         />
-                    </div>
+                    </motion.div>
                 </div>
 
 

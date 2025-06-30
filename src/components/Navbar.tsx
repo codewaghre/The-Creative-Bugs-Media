@@ -8,6 +8,8 @@ import { IoMdPartlySunny } from "react-icons/io";
 import { useTheme } from "@/hooks/theme-context";
 import { Link } from "react-router-dom";
 
+import { motion } from "motion/react"
+
 const Navbar = () => {
     const { theme, toggleTheme } = useTheme();
 
@@ -77,7 +79,12 @@ const Navbar = () => {
 
 
     return (
-        <nav className="nav content-container" role="navigation" aria-label="Main navigation">
+        <motion.nav
+            initial={{ opacity: 0, y: -10, filter: 'blur(8px)' }}
+            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="nav content-container" role="navigation" aria-label="Main navigation">
 
             {/* Logo */}
             <a href="/">
@@ -240,7 +247,7 @@ const Navbar = () => {
                     </div>)}
 
             </div>
-        </nav>
+        </motion.nav>
     )
 }
 

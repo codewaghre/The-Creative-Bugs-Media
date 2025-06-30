@@ -1,7 +1,9 @@
-import Heading from '@/components/Heading'
 import { Player } from '@lottiefiles/react-lottie-player';
+import { motion } from "motion/react"
 import { useEffect } from 'react';
+
 import Tilt from 'react-parallax-tilt';
+import Heading from '@/components/Heading'
 
 import workflowHeading from '../data/heading.json'
 import workflowData from '../data/workflow.json';
@@ -33,23 +35,16 @@ const Workflow = () => {
                     />
                 </div>
 
-                {/* <div className='workflow-para'>
-                    <p>
-                        Our process runs on <span className='bg-green'>SOPs</span>, <span className='bg-green'>timelines</span>, and <span className='bg-green'>trust </span> — so your content doesn’t wait, and your brand never feels off-track
-                    </p>
-
-                    <p>
-                        It’s a creative flow where ideas become scripts, shoots, and stunning edits — <span className='bg-green'>all with passion and precision.</span>
-                    </p>
-
-                    <p>Our process isn’t just smooth — <span className='bg-green'>it’s cinematic.</span></p>
-                </div> */}
-
 
                 {/* Workflow Paragraphs */}
                 <div className="workflow-para">
                     {workflowData.paragraphs.map((para, index) => (
-                        <p key={index}>
+                        <motion.p
+                            initial={{ opacity: 0, y: 16, filter: 'blur(4px)' }}
+                            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                            transition={{ duration: 0.4, delay: 0.1, ease: "easeInOut" }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            key={index}>
                             {para.textParts.map((part, i) =>
                                 typeof part === 'string' ? (
                                     part
@@ -59,13 +54,12 @@ const Workflow = () => {
                                     </span>
                                 )
                             )}
-                        </p>
+                        </motion.p>
                     ))}
                 </div>
 
 
                 {/* <div className='workflow-card'>
-
                     <Tilt glareEnable={true} glareMaxOpacity={0.8} glareColor={"var(--glare-color-orange)"} glarePosition="top" glareBorderRadius="1px" className='tilt'>
 
                         <div className='workflow-card-one'>
@@ -88,54 +82,6 @@ const Workflow = () => {
                             </div>
                         </div>
                     </Tilt>
-
-
-
-                    <Tilt glareEnable={true} glareMaxOpacity={0.8} glareColor={"var(--glare-color-pink)"} glarePosition="top" glareBorderRadius="1px" className='tilt'>
-
-                        <div className='workflow-card-two'>
-
-                            <div className='card-one-lottie'>
-                                <div className='workflow-lottie'>
-                                    <Player
-                                        autoplay
-                                        loop
-                                        src="/lottie/studio.json"
-                                    />
-                                </div>
-                            </div>
-
-                            <div className='card-one-data'>
-                                <h1 className='bg-pink'>Production & Execution</h1>
-                                <p>We handle the scripting, shoots, logistics, all on autopilot, with timely approvals.
-                                </p>
-                                <p>At CreativeBugs Media, we specialize in video production, turning your ideas into visually stunning stories. Our experienced team excels in every aspect of video production, from pre-production planning to shooting on location or in the studio.</p>
-                            </div>
-                        </div>
-                    </Tilt>
-
-
-                    <Tilt glareEnable={true} glareMaxOpacity={0.8} glareColor={"var(--glare-color-red)"} glarePosition="top" glareBorderRadius="1px" className='tilt'>
-                        <div className='workflow-card-three'>
-
-                            <div className='card-one-lottie'>
-                                <div className='workflow-lottie'>
-                                    <Player
-                                        autoplay
-                                        loop
-                                        src="/lottie/editing.json"
-                                    />
-                                </div>
-                            </div>
-
-                            <div className='card-one-data'>
-                                <h1 className='bg-red'> Post-Production & Delivery</h1>
-                                <p>Editing, polishing, and packaging content that’s on-brand, on-message, and on time.</p>
-                                <p>We transform raw footage into captivating videos that elevate your brand. Our skilled editors enhance visuals, perfect sound quality, and add dynamic effects to ensure every frame aligns with your vision. Whether it's a promotional video or a social media clip.</p>
-                            </div>
-                        </div>
-                    </Tilt>
-
                 </div> */}
 
 
@@ -151,7 +97,12 @@ const Workflow = () => {
                             glareBorderRadius="1px"
                             className="tilt"
                         >
-                            <div className={card.className}>
+                            <motion.div
+                                initial={{ opacity: 0, y: 2, filter: 'blur(4px)' }}
+                                whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                                transition={{ duration: 0.4, ease: "easeInOut" }}
+                                viewport={{ once: false, amount: 0.5 }}
+                                className={card.className}>
                                 <div className="card-one-lottie">
                                     <div className="workflow-lottie">
                                         <Player autoplay loop src={card.lottieSrc} />
@@ -164,7 +115,7 @@ const Workflow = () => {
                                         <p key={i}>{p}</p>
                                     ))}
                                 </div>
-                            </div>
+                            </motion.div>
                         </Tilt>
                     ))}
                 </div>

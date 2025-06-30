@@ -23,7 +23,7 @@ const eventId = import.meta.env.VITE_EVENT_ID;
 
 function App() {
 
-  const [loadingComplete, setLoadingComplete] = useState(false);
+  const [loadingComplete, setLoadingComplete] = useState(true);
 
   return (
     <>

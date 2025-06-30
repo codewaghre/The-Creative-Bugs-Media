@@ -8,8 +8,11 @@ import Tilt from 'react-parallax-tilt';
 import aboutusHeading from '../data/heading.json'
 import about from '../data/about.json'
 
+import { motion } from "motion/react"
+
 const About = () => {
     const { one, two, oneColor, twoColor } = aboutusHeading.aboutus
+
     return (
         <main className="about">
             <div className="about-heading">
@@ -27,31 +30,64 @@ const About = () => {
                         glareMaxOpacity={0.1}
                         glareColor={"var(--glare-color-about)"}
                         glarePosition="all">
-                        <div className="about-img">
+                        <motion.div
+                            initial={{ opacity: 0, y: 2, filter: 'blur(4px)' }}
+                            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: false, amount: 0.2 }}
+                            className="about-img">
                             <SVGComponent />
-                        </div>
+                        </motion.div>
                     </Tilt>
                 </div>
 
                 <div className="about-box-one">
-                    <p>{about.content.p1}</p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
+                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                    >
+                        {about.content.p1}
+                    </motion.p>
                 </div>
 
                 <div className="about-box-two">
-                    <p>{about.content.p2}</p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
+                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                    >
+                        {about.content.p2}
+                    </motion.p>
                 </div>
 
-                <div className="about-box-four">
-                    <a href="">Linked</a>
-                    <img className="about-box-img" src="/bg.png" alt="Background" />
-                </div>
 
-                <div className="about-box-five"><a href="">Instagram</a>
-                    <img className="about-box-img" src="/bg.png" alt="Background" />
-                </div>
+                {
+                    about.socialsLinkAbout.map((data) => (
+                        <div className={data.className}>
+                            <motion.a
+                                initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
+                                whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                                transition={{ duration: 0.5, delay: 0.1 }}
+                                viewport={{ once: true, amount: 0.5 }}
+                                href={data.link} target="_blank">
+                                {data.linkName}
+                            </motion.a>
+                            <img className="about-box-img" src={data.img} alt="Background" />
+                        </div>
+                    ))
+
+                }
 
                 <div className="about-box-six">
-                    <p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
+                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                    >
                         {about.content.p3.map((part, i) =>
                             typeof part === 'string' ? (
                                 part
@@ -61,7 +97,7 @@ const About = () => {
                                 </span>
                             )
                         )}
-                    </p>
+                    </motion.p>
                 </div>
 
                 <div className="about-box-nine"></div>

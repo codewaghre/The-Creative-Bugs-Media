@@ -14,6 +14,8 @@ import Heading from '@/components/Heading';
 import connectHeading from '../data/heading.json'
 import connect from '../data/connect.json'
 
+import { motion } from "motion/react"
+
 interface EventComponentProps {
     username: string;
     eventId: string;
@@ -54,11 +56,33 @@ const EventComponent = ({ username, eventId }: EventComponentProps) => {
                 </header>
 
                 <div className="connect-para">
-                    <p>{p1}</p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
+                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.5, }}
+                        viewport={{ once: true, amount: 0.5 }}
+                    >
+                        {p1}
+                    </motion.p>
 
-                    <p>{p2}</p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
+                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                    >
+                        {p2}
+                    </motion.p>
 
-                    <span className='bg-green'>{p3}</span>
+                    <motion.span
+                        initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
+                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                        className='bg-green'
+                    >
+                        {p3}
+                    </motion.span>
                 </div>
 
                 {isLoading || eventLoading ? (<SkeletonLoader />)

@@ -7,6 +7,7 @@ import Dummy from "@/components/Dummy"
 import Heading from "@/components/Heading"
 
 import { Player } from '@lottiefiles/react-lottie-player';
+import { motion } from "motion/react"
 
 const Numbers = () => {
 
@@ -40,21 +41,36 @@ const Numbers = () => {
                                 {number.map((data) => (
                                     <div key={data.id} className={data.statsClassName} role="listitem">
                                         <div className="lottie-container">
-                                            <div className="lottie">
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 4, filter: 'blur(6px)' }}
+                                                whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                                                transition={{ duration: 0.5 }}
+                                                viewport={{ once: false, amount: 0.5 }}
+                                                className="lottie">
                                                 <Player
                                                     autoplay
                                                     loop
                                                     src={data.lottieFile}
                                                     className={data.playerClassName}
                                                 />
-                                            </div>
+                                            </motion.div>
                                         </div>
 
                                         <div className={data.statsDataClassName}>
                                             <img className="about-box-img" src={data.bgImg} alt="Background" />
                                             <div className="stata-data-container">
-                                                <p className="font-paytone" aria-label="25 plus">{data.number}</p>
-                                                <p>{data.slogan}</p>
+                                                <motion.p
+                                                    initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
+                                                    whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                                                    transition={{ duration: 0.5 }}
+                                                    viewport={{ once: true, amount: 0.8 }}
+                                                    className="font-paytone" aria-label="25 plus">{data.number}</motion.p>
+                                                <motion.p
+                                                    initial={{ opacity: 0, y: 6, filter: 'blur(6px)' }}
+                                                    whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                                                    transition={{ duration: 0.5 }}
+                                                    viewport={{ once: true, amount: 0.8 }}
+                                                >{data.slogan}</motion.p>
                                             </div>
                                         </div>
                                     </div>

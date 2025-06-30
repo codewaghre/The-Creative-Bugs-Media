@@ -2,7 +2,7 @@
 
 {
     "logo" : {
-        "to": "https://www.google.co.in/",
+        "to": "/",
         "h1": "Creative",
         "h2": "BUG'S"
     },
@@ -19,7 +19,7 @@
     "navLinkConnect" : {
         "id": "2",
         "className" : "footer-box-eight",
-        "to": "https://www.google.co.in/",
+        "to": "/contact",
         "target" : "blank",
         "h1": "Connect."
     }, 
@@ -27,7 +27,7 @@
     "navLinkAbout" : {
         "id": "3",
         "className" : "footer-box-nine",
-        "to": "https://www.google.co.in/",
+        "to": "/about",
         "target" : "blank",
         "h1": "About."
     },
@@ -45,9 +45,11 @@
             "className" : "footer-box-thirteen",
             "to":"mailto:ops.creativebugs@gmail.com",
             "target" : "blank",
-            "h1": "cretivebugsmedia@gmail.com"
+            "h1": "ops.creativebugs@gmail.com"
         }
     ],
 
-    "lottie" : "/lottie/india.json"
+    "lottie" : "/lottie/india.json",
+    "copyrightStartDate" : "2021",
+    "copyrightStatement" : "Creative Bugs Media."
 }

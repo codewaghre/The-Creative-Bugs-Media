@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 import footer from '../data/footer.json'
 import toast from "react-hot-toast";
 
+import { motion } from "motion/react"
+
 const Footer = () => {
 
-    const { logo, lottie, navLinkAbout, navLinkConnect, navLinkWork, socials } = footer
+    const { logo, lottie, navLinkAbout, navLinkConnect, navLinkWork, socials, copyrightStatement } = footer
     const [email, setEmail] = useState('');
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -91,7 +93,16 @@ const Footer = () => {
 
                 <Link className="footer-box-six" to={logo.to}>
                     <div>
-                        <h1>{logo.h1}<span className="font-outfit bugs ">{logo.h2}</span></h1>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 6, filter: 'blur(6px)' }}
+                            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: false, amount: 0.5 }}
+                        >
+                            {logo.h1}
+                            <span className="font-outfit bugs ">
+                                {logo.h2}</span>
+                        </motion.h1>
                     </div>
                 </Link>
 
@@ -103,7 +114,14 @@ const Footer = () => {
                         onFocus={handleCraftEnter}
                         onBlur={handleCraftEnter}
                     >
-                        <h1>{navLinkWork.h1}</h1>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 6, filter: 'blur(6px)' }}
+                            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                            viewport={{ once: false, amount: 0.5 }}
+                        >
+                            {navLinkWork.h1}
+                        </motion.h1>
                     </div>
                 </Link>
 
@@ -115,7 +133,14 @@ const Footer = () => {
                         onFocus={handleConnectEnter}
                         onBlur={handleConnectEnter}
                     >
-                        <h1>{navLinkConnect.h1}</h1>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 6, filter: 'blur(6px)' }}
+                            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            viewport={{ once: false, amount: 0.5 }}
+                        >
+                            {navLinkConnect.h1}
+                        </motion.h1>
                     </div>
                 </Link>
 
@@ -127,7 +152,14 @@ const Footer = () => {
                         onFocus={handleAboutEnter}
                         onBlur={handleAboutEnter}
                     >
-                        <h1>About.</h1>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 6, filter: 'blur(6px)' }}
+                            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            viewport={{ once: false, amount: 0.5 }}
+                        >
+                            {navLinkAbout.h1}
+                        </motion.h1>
                     </div>
                 </Link>
 
@@ -140,14 +172,25 @@ const Footer = () => {
                         <Link key={data.id} className={data.className} to={data.to} target={data.target} >
                             <div>
                                 <img className="about-box-img" src="/bg.png" alt="Background" />
-                                <div>{data.h1}</div>
+                                <motion.div
+                                    initial={{ opacity: 0, y: 6, filter: 'blur(6px)' }}
+                                    whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                                    transition={{ duration: 0.5, delay: 0.1 }}
+                                    viewport={{ once: false, amount: 0.5 }}
+                                >
+                                    {data.h1}
+                                </motion.div>
                             </div>
                         </Link>
                     ))
                 }
                 <div className="footer-box-fourteen">
                     <div className='form'>
-                        <form
+                        <motion.form
+                            initial={{ opacity: 0, y: 6, filter: 'blur(6px)' }}
+                            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                            viewport={{ once: false, amount: 0.5 }}
                             action=""
                             onSubmit={handleSubmit}
                         >
@@ -162,24 +205,37 @@ const Footer = () => {
                             <button>
                                 Subscribe
                             </button>
-                        </form>
+                        </motion.form>
                     </div>
                 </div>
 
 
                 <div className="footer-box-fifteen"></div>
-                <div className="footer-box-seventeen">@2025 thecreativebugsmedia.com</div>
+                <motion.div
+                    className="footer-box-seventeen"
+                    initial={{ opacity: 0, y: 6, filter: 'blur(6px)' }}
+                    whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    viewport={{ once: false, amount: 0.5 }}
+                >
+                    @{new Date().getFullYear()} - {copyrightStatement}
+                </motion.div>
                 <div className="twenty"></div>
 
                 <div className="india">
-                    <div className='footer-lottie-one'>
+                    <motion.div
+                        initial={{ opacity: 0, y: 2, filter: 'blur(6px)' }}
+                        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        viewport={{ once: false, amount: 0.5 }}
+                        className='footer-lottie-one'>
                         <Player
                             autoplay
                             loop
                             src={lottie}
                             className='footer-lottie'
                         />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </footer >

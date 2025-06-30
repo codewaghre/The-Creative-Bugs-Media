@@ -37,5 +37,22 @@
             "link": "mailto:ops.creativebugs@gmail.com",
             "img": "/bg.png"
         }
+    ],
+
+    "socialsLinkAbout" : [
+        {
+            "id": "2",
+            "className": "about-box-four",
+            "linkName": "LinkedIn",
+            "link": "https://www.google.com/",
+            "img": "/bg.png"
+        },
+        {
+            "id": "3",
+            "className": "about-box-five",
+            "linkName": "Email",
+            "link": "mailto:ops.creativebugs@gmail.com",
+            "img": "/bg.png"
+        }
     ]
 }

@@ -6,6 +6,8 @@ import teamData from '../data/team.json'
 import { useState } from "react";
 
 import teamHeading from '../data/heading.json'
+import { motion } from "motion/react"
+
 
 const Team = () => {
 
@@ -85,26 +87,68 @@ const Team = () => {
 
                         <div className="team-info-card">
                             <div className="team-img">
-                                <img src={member.image} alt="" />
+                                <motion.img
+                                    initial={{ opacity: 0, y: 0, filter: 'blur(8px)' }}
+                                    whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                                    transition={{ duration: 0.5 }}
+                                    viewport={{ once: false, amount: 0.5 }}
+                                    src={member.image}
+                                    alt="team img" />
                             </div>
 
                             <div className="team-info">
-                                <h1 className="font-paytone">{member.name}</h1>
-                                <p>{member.role}</p>
-                                <p>{member.description}</p>
+                                <motion.h1
+                                    initial={{ opacity: 0, y: 6, filter: 'blur(8px)' }}
+                                    whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                                    transition={{ duration: 0.5 }}
+                                    viewport={{ once: false, amount: 0.5 }}
+                                    className="font-paytone"
+                                >
+                                    {member.name}
+                                </motion.h1>
+                                <motion.p
+                                    initial={{ opacity: 0, y: 6, filter: 'blur(8px)' }}
+                                    whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                                    transition={{ duration: 0.5 }}
+                                    viewport={{ once: false, amount: 0.5 }}
+                                >
+                                    {member.role}
+                                </motion.p>
+                                <motion.p
+                                    initial={{ opacity: 0, y: 6, filter: 'blur(8px)' }}
+                                    whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                                    transition={{ duration: 0.6 }}
+                                    viewport={{ once: false, amount: 0.5 }}
+                                >
+                                    {member.description}
+                                </motion.p>
                             </div>
                         </div>
                     </div>
 
                     <div className="team-box-two">
                         <div className="team-img-container">
-                            <img src={imgOneData.image} alt="" className={fade ? "fade-out" : ""} />
+                            <motion.img
+                                initial={{ opacity: 0, y: 0, filter: 'blur(8px)' }}
+                                whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                                transition={{ duration: 0.5 }}
+                                viewport={{ once: false, amount: 0.5 }}
+                                src={imgOneData.image}
+                                alt="team img"
+                                className={fade ? "fade-out" : ""} />
                         </div>
                     </div>
 
                     <div className="team-box-three">
                         <div className="team-img-container">
-                            <img src={imgTwoData.image} alt="" className={fade ? "fade-out" : ""} />
+                            <motion.img
+                                initial={{ opacity: 0, y: 0, filter: 'blur(8px)' }}
+                                whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                                transition={{ duration: 0.5 }}
+                                viewport={{ once: false, amount: 0.5 }}
+                                src={imgTwoData.image}
+                                alt="team img"
+                                className={fade ? "fade-out" : ""} />
                         </div>
                     </div>
 
@@ -129,9 +173,14 @@ const Team = () => {
 
 
                     <div className="team-box-six">
-                        <p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 6, filter: 'blur(8px)' }}
+                            whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                        >
                             The Creative Bugs Media team is a dynamic collective of passionate creators based in Mumbai, each bringing unique talents in video editing, animation, podcasting, reels, production, and on-location shooting.
-                        </p>
+                        </motion.p>
                     </div>
 
 
